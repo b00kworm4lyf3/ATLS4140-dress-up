@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dmyk266ahglcf"]
+
+[ext_resource type="Texture2D" uid="uid://bxq1xnkws1rb2" path="res://assets/clothing/jeans.png" id="1_mdrij"]
+[ext_resource type="Script" uid="uid://cj4tu5m7shb6u" path="res://scripts/drag_and_drop.gd" id="2_undmj"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=329895496 groups=["clothing"]]
+texture = ExtResource("1_mdrij")
+script = ExtResource("2_undmj")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1791838675]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=827413150]
+polygon = PackedVector2Array(-584, 614, -572, 637, -421, 685, -206, 728, -66, 754, 81, 764, 228, 750, 242, 910, 287, 888, 291, 941, 232, 1006, 237, 1050, 292, 1008, 297, 1190, 248, 1360, 179, 1500, -626, 1500, -683, 1257, -697, 1000, -655, 688)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1663053800]
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

@@ -11,13 +11,22 @@ config_version=5
 [application]
 
 config/name="dress-up"
+run/main_scene="uid://ni5w6boxlha0"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Main="*uid://84awhrgi1dvp"
 
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[global_group]
+
+clothing=""
 
 [physics]
 

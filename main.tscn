@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ni5w6boxlha0"]
+
+[ext_resource type="Texture2D" uid="uid://cbgsrhv7vn2cy" path="res://assets/skin_tones/brown_skin.png" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://dmyk266ahglcf" path="res://jeans.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cnhpgirvlyyi3" path="res://tshirt.tscn" id="3_h2yge"]
+
+[node name="dressUpGame" type="Node2D" unique_id=1326834742]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2003574125]
+
+[node name="model" type="Sprite2D" parent="." unique_id=1727971511]
+position = Vector2(-200, 24)
+scale = Vector2(0.19999933, 0.19999933)
+texture = ExtResource("1_ig7tw")
+
+[node name="Sprite2D" parent="." unique_id=329895496 instance=ExtResource("2_0xm2m")]
+position = Vector2(-200, 24)
+scale = Vector2(0.19999933, 0.19999933)
+
+[node name="Sprite2D2" parent="." unique_id=449087800 instance=ExtResource("3_h2yge")]
+position = Vector2(-200, 24)
+scale = Vector2(0.19999933, 0.19999933)
