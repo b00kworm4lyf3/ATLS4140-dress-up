@@ -41,12 +41,18 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 					Main.clothing_list.append(self)
 					self.z_index = Main.clothing_list.size()
 					area_2d.z_index = Main.clothing_list.size()
+				audio_player.pitch_scale = 1.4
+				audio_player.play()
 		elif event.pressed == false and (position-perfect_pos).length() < pos_forgive.length():
 			dragging = false
 			position = perfect_pos
+			audio_player.pitch_scale = 0.6
+			audio_player.play()
 
 		elif event.pressed == false:
 			dragging = false
+			audio_player.pitch_scale = 0.6
+			audio_player.play()
 
 
 	

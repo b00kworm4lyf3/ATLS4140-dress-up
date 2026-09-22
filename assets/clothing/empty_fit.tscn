@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bxq1xnkws1rb2" path="res://assets/clothing/jeans.png" id="1_2glkn"]
 [ext_resource type="Script" uid="uid://cj4tu5m7shb6u" path="res://scripts/drag_and_drop.gd" id="2_fj4rp"]
+[ext_resource type="AudioStream" uid="uid://ogun70e58i1r" path="res://assets/sound/zipclick.wav" id="3_fj4rp"]
 
 [node name="Sprite2D" type="Sprite2D" unique_id=329895496 groups=["clothing"]]
 texture = ExtResource("1_2glkn")
@@ -12,5 +13,7 @@ script = ExtResource("2_fj4rp")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=827413150]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1663053800]
+stream = ExtResource("3_fj4rp")
+bus = &"Sound Effects"
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

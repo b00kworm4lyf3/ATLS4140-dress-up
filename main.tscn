@@ -1,8 +1,16 @@
 [gd_scene format=3 uid="uid://ni5w6boxlha0"]
 
 [ext_resource type="Texture2D" uid="uid://cbgsrhv7vn2cy" path="res://assets/skin_tones/brown_skin.png" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://dmyk266ahglcf" path="res://jeans.tscn" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://cnhpgirvlyyi3" path="res://tshirt.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dmyk266ahglcf" path="res://assets/clothing/jeans.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cnhpgirvlyyi3" path="res://assets/clothing/tshirt.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dmpbi3qlou5ds" path="res://assets/clothing/corset.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bsa4decfmad32" path="res://assets/clothing/leggings.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://dtsj8bpiariyh" path="res://assets/clothing/ombre_top.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://bgwn8u7ugwwpt" path="res://assets/clothing/polka_top.tscn" id="6_272bh"]
+[ext_resource type="PackedScene" uid="uid://bumrvar0nmqs2" path="res://assets/clothing/sailor_top.tscn" id="7_5vw27"]
+[ext_resource type="PackedScene" uid="uid://uu5wyn42duhc" path="res://assets/clothing/shorts.tscn" id="9_kek77"]
+[ext_resource type="PackedScene" uid="uid://bbqlrw6kfdkks" path="res://assets/clothing/skirt.tscn" id="10_4c57u"]
+[ext_resource type="PackedScene" uid="uid://cwpeycar4gq5l" path="res://assets/clothing/sweatpants.tscn" id="11_efxa6"]
 
 [node name="dressUpGame" type="Node2D" unique_id=1326834742]
 
@@ -20,3 +28,35 @@ scale = Vector2(0.19999933, 0.19999933)
 [node name="Sprite2D2" parent="." unique_id=449087800 instance=ExtResource("3_h2yge")]
 position = Vector2(-200, 24)
 scale = Vector2(0.19999933, 0.19999933)
+
+[node name="Sprite2D4" parent="." unique_id=293200835 instance=ExtResource("5_lquwl")]
+position = Vector2(200, 24)
+scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D5" parent="." unique_id=263965214 instance=ExtResource("6_7mycd")]
+position = Vector2(200, -25)
+scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D6" parent="." unique_id=809555960 instance=ExtResource("6_272bh")]
+position = Vector2(300, -25)
+scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D7" parent="." unique_id=2007854860 instance=ExtResource("7_5vw27")]
+position = Vector2(400, -25)
+scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D3" parent="." unique_id=504652399 instance=ExtResource("4_1bvp3")]
+position = Vector2(500, -25)
+scale = Vector2(0.19999999, 0.19999999)
+
+[node name="Sprite2D8" parent="." unique_id=1635342349 instance=ExtResource("9_kek77")]
+position = Vector2(300, 24)
+scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D9" parent="." unique_id=1243000374 instance=ExtResource("10_4c57u")]
+position = Vector2(400, 24)
+scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D10" parent="." unique_id=469163298 instance=ExtResource("11_efxa6")]
+position = Vector2(500, 24)
+scale = Vector2(0.2, 0.2)
