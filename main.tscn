@@ -11,52 +11,91 @@
 [ext_resource type="PackedScene" uid="uid://uu5wyn42duhc" path="res://assets/clothing/shorts.tscn" id="9_kek77"]
 [ext_resource type="PackedScene" uid="uid://bbqlrw6kfdkks" path="res://assets/clothing/skirt.tscn" id="10_4c57u"]
 [ext_resource type="PackedScene" uid="uid://cwpeycar4gq5l" path="res://assets/clothing/sweatpants.tscn" id="11_efxa6"]
+[ext_resource type="Texture2D" uid="uid://crm0c41kc1mw3" path="res://assets/skin_tones/dark_skin.png" id="11_w48qg"]
+[ext_resource type="Texture2D" uid="uid://dhag0u0woh2rm" path="res://assets/skin_tones/medium_skin.png" id="13_vivmo"]
+[ext_resource type="Texture2D" uid="uid://ju62kdg81c7y" path="res://assets/skin_tones/light_skin.png" id="14_2cqfq"]
+
+[sub_resource type="Gradient" id="Gradient_yaehf"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_2cqfq"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vivmo"]
+noise = SubResource("FastNoiseLite_2cqfq")
+color_ramp = SubResource("Gradient_yaehf")
+invert = true
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gmbx4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_w48qg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_ig7tw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vivmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_2cqfq")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="dressUpGame" type="Node2D" unique_id=1326834742]
 
+[node name="bg" type="Sprite2D" parent="." unique_id=114402920]
+position = Vector2(118, 24)
+scale = Vector2(5.6875, 5.6875)
+texture = SubResource("NoiseTexture2D_vivmo")
+
+[node name="model" type="AnimatedSprite2D" parent="." unique_id=765618600]
+position = Vector2(-200, 24)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_gmbx4")
+frame = 2
+frame_progress = 0.8088405
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2003574125]
 
-[node name="model" type="Sprite2D" parent="." unique_id=1727971511]
-position = Vector2(-200, 24)
-scale = Vector2(0.19999933, 0.19999933)
-texture = ExtResource("1_ig7tw")
-
-[node name="Sprite2D" parent="." unique_id=329895496 instance=ExtResource("2_0xm2m")]
+[node name="jeans" parent="." unique_id=329895496 instance=ExtResource("2_0xm2m")]
 position = Vector2(-200, 24)
 scale = Vector2(0.19999933, 0.19999933)
 
-[node name="Sprite2D2" parent="." unique_id=449087800 instance=ExtResource("3_h2yge")]
+[node name="tshirt" parent="." unique_id=449087800 instance=ExtResource("3_h2yge")]
 position = Vector2(-200, 24)
 scale = Vector2(0.19999933, 0.19999933)
 
-[node name="Sprite2D4" parent="." unique_id=293200835 instance=ExtResource("5_lquwl")]
+[node name="leggings" parent="." unique_id=293200835 instance=ExtResource("5_lquwl")]
 position = Vector2(200, 24)
 scale = Vector2(0.2, 0.2)
 
-[node name="Sprite2D5" parent="." unique_id=263965214 instance=ExtResource("6_7mycd")]
+[node name="ombre_top" parent="." unique_id=263965214 instance=ExtResource("6_7mycd")]
 position = Vector2(200, -25)
 scale = Vector2(0.2, 0.2)
 
-[node name="Sprite2D6" parent="." unique_id=809555960 instance=ExtResource("6_272bh")]
+[node name="polka_top" parent="." unique_id=809555960 instance=ExtResource("6_272bh")]
 position = Vector2(300, -25)
 scale = Vector2(0.2, 0.2)
 
-[node name="Sprite2D7" parent="." unique_id=2007854860 instance=ExtResource("7_5vw27")]
+[node name="sailor_top" parent="." unique_id=2007854860 instance=ExtResource("7_5vw27")]
 position = Vector2(400, -25)
 scale = Vector2(0.2, 0.2)
 
-[node name="Sprite2D3" parent="." unique_id=504652399 instance=ExtResource("4_1bvp3")]
+[node name="corset" parent="." unique_id=504652399 instance=ExtResource("4_1bvp3")]
 position = Vector2(500, -25)
 scale = Vector2(0.19999999, 0.19999999)
 
-[node name="Sprite2D8" parent="." unique_id=1635342349 instance=ExtResource("9_kek77")]
+[node name="shorts" parent="." unique_id=1635342349 instance=ExtResource("9_kek77")]
 position = Vector2(300, 24)
 scale = Vector2(0.2, 0.2)
 
-[node name="Sprite2D9" parent="." unique_id=1243000374 instance=ExtResource("10_4c57u")]
+[node name="skirt" parent="." unique_id=1243000374 instance=ExtResource("10_4c57u")]
 position = Vector2(400, 24)
 scale = Vector2(0.2, 0.2)
 
-[node name="Sprite2D10" parent="." unique_id=469163298 instance=ExtResource("11_efxa6")]
+[node name="sweatpants" parent="." unique_id=469163298 instance=ExtResource("11_efxa6")]
 position = Vector2(500, 24)
 scale = Vector2(0.2, 0.2)
