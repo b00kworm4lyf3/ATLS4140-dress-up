@@ -56,3 +56,7 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 
 
 	
+
+
+func _on_button_pressed() -> void:
+	pass # Replace with function body.

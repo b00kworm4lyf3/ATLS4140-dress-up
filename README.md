@@ -5,3 +5,10 @@ Base functionality adapted from [I Made a Dress Up Game in Godot](https://www.yo
 Click sound from [Open Game Art](https://opengameart.org/content/zippo-click-sound)
 
 Art and background design by Jadynn
+
+Juice!
+- Click Sound (Sage)
+- Music (Jadynn)
+- Custom Cursor (Jadynn)
+- Particle System (Both of us!)
+- 'Done' Button (Sage)

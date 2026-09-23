@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ni5w6boxlha0"]
 
 [ext_resource type="Texture2D" uid="uid://cbgsrhv7vn2cy" path="res://assets/skin_tones/brown_skin.png" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://cvag3f2r6tick" path="res://assets/background/game_bg.jpg" id="1_vivmo"]
 [ext_resource type="PackedScene" uid="uid://dmyk266ahglcf" path="res://assets/clothing/jeans.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://cnhpgirvlyyi3" path="res://assets/clothing/tshirt.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dmpbi3qlou5ds" path="res://assets/clothing/corset.tscn" id="4_1bvp3"]
@@ -14,15 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://crm0c41kc1mw3" path="res://assets/skin_tones/dark_skin.png" id="11_w48qg"]
 [ext_resource type="Texture2D" uid="uid://dhag0u0woh2rm" path="res://assets/skin_tones/medium_skin.png" id="13_vivmo"]
 [ext_resource type="Texture2D" uid="uid://ju62kdg81c7y" path="res://assets/skin_tones/light_skin.png" id="14_2cqfq"]
-
-[sub_resource type="Gradient" id="Gradient_yaehf"]
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_2cqfq"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vivmo"]
-noise = SubResource("FastNoiseLite_2cqfq")
-color_ramp = SubResource("Gradient_yaehf")
-invert = true
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gmbx4"]
 animations = [{
@@ -44,14 +36,63 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmbx4"]
+bg_color = Color(0.6627451, 0.43529412, 0.27058825, 1)
+
+[sub_resource type="GDScript" id="GDScript_vivmo"]
+script/source = "extends Button
+
+@onready var model := %model
+
+func _on_pressed() -> void:
+	model.frame = 1
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ip1k6"]
+bg_color = Color(0.44313726, 0.25882354, 0.1764706, 1)
+
+[sub_resource type="GDScript" id="GDScript_2cqfq"]
+script/source = "extends Button
+
+@onready var model := %model
+
+func _on_pressed() -> void:
+	model.frame = 0
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5tm6j"]
+bg_color = Color(0.90588236, 0.7294118, 0.63529414, 1)
+
+[sub_resource type="GDScript" id="GDScript_yaehf"]
+script/source = "extends Button
+
+@onready var model := %model
+
+func _on_pressed() -> void:
+	model.frame = 3
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n4aod"]
+bg_color = Color(0.8117647, 0.5882353, 0.45882353, 1)
+
+[sub_resource type="GDScript" id="GDScript_074og"]
+script/source = "extends Button
+
+@onready var model := %model
+
+func _on_pressed() -> void:
+	model.frame = 2
+"
+
 [node name="dressUpGame" type="Node2D" unique_id=1326834742]
 
 [node name="bg" type="Sprite2D" parent="." unique_id=114402920]
-position = Vector2(118, 24)
-scale = Vector2(5.6875, 5.6875)
-texture = SubResource("NoiseTexture2D_vivmo")
+position = Vector2(0, 125)
+scale = Vector2(1.18, 1.18)
+texture = ExtResource("1_vivmo")
 
 [node name="model" type="AnimatedSprite2D" parent="." unique_id=765618600]
+unique_name_in_owner = true
 position = Vector2(-200, 24)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_gmbx4")
@@ -59,6 +100,7 @@ frame = 2
 frame_progress = 0.8088405
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2003574125]
+position = Vector2(3, -80)
 
 [node name="jeans" parent="." unique_id=329895496 instance=ExtResource("2_0xm2m")]
 position = Vector2(-200, 24)
@@ -99,3 +141,52 @@ scale = Vector2(0.2, 0.2)
 [node name="sweatpants" parent="." unique_id=469163298 instance=ExtResource("11_efxa6")]
 position = Vector2(500, 24)
 scale = Vector2(0.2, 0.2)
+
+[node name="Button" type="Button" parent="." unique_id=102287164]
+offset_left = -570.0
+offset_top = 150.0
+offset_right = -535.0
+offset_bottom = 185.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_gmbx4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gmbx4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gmbx4")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gmbx4")
+script = SubResource("GDScript_vivmo")
+
+[node name="Button2" type="Button" parent="." unique_id=349055443]
+offset_left = -568.0
+offset_top = 197.0
+offset_right = -537.0
+offset_bottom = 228.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ip1k6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ip1k6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ip1k6")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ip1k6")
+script = SubResource("GDScript_2cqfq")
+
+[node name="Button3" type="Button" parent="." unique_id=1877654219]
+offset_left = -528.0
+offset_top = 152.0
+offset_right = -499.0
+offset_bottom = 181.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5tm6j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5tm6j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5tm6j")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_5tm6j")
+script = SubResource("GDScript_yaehf")
+
+[node name="Button4" type="Button" parent="." unique_id=1908611914]
+offset_left = -527.0
+offset_top = 199.0
+offset_right = -501.0
+offset_bottom = 225.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_n4aod")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n4aod")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n4aod")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_n4aod")
+script = SubResource("GDScript_074og")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
+[connection signal="pressed" from="Button4" to="Button4" method="_on_pressed"]
