@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cbgsrhv7vn2cy" path="res://assets/skin_tones/brown_skin.png" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://cvag3f2r6tick" path="res://assets/background/game_bg.jpg" id="1_vivmo"]
 [ext_resource type="PackedScene" uid="uid://dmyk266ahglcf" path="res://assets/clothing/jeans.tscn" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://byvumhbn3ldv8" path="res://assets/background/sparkles.png" id="2_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://cnhpgirvlyyi3" path="res://assets/clothing/tshirt.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dmpbi3qlou5ds" path="res://assets/clothing/corset.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bsa4decfmad32" path="res://assets/clothing/leggings.tscn" id="5_lquwl"]
@@ -15,6 +16,12 @@
 [ext_resource type="Texture2D" uid="uid://crm0c41kc1mw3" path="res://assets/skin_tones/dark_skin.png" id="11_w48qg"]
 [ext_resource type="Texture2D" uid="uid://dhag0u0woh2rm" path="res://assets/skin_tones/medium_skin.png" id="13_vivmo"]
 [ext_resource type="Texture2D" uid="uid://ju62kdg81c7y" path="res://assets/skin_tones/light_skin.png" id="14_2cqfq"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nwoa8"]
+particles_animation = true
+particles_anim_h_frames = 8
+particles_anim_v_frames = 4
+particles_anim_loop = false
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gmbx4"]
 animations = [{
@@ -90,6 +97,20 @@ func _on_pressed() -> void:
 position = Vector2(0, 125)
 scale = Vector2(1.18, 1.18)
 texture = ExtResource("1_vivmo")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1989285198]
+material = SubResource("CanvasItemMaterial_nwoa8")
+position = Vector2(37, -57)
+scale = Vector2(6.920001, 3.720001)
+amount = 16
+texture = ExtResource("2_2cqfq")
+emission_shape = 1
+emission_sphere_radius = 103.02
+spread = 120.75
+gravity = Vector2(0, 0)
+scale_amount_min = 1.5
+scale_amount_max = 2.0
+anim_speed_max = 0.3
 
 [node name="model" type="AnimatedSprite2D" parent="." unique_id=765618600]
 unique_name_in_owner = true
