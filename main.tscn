@@ -16,6 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://crm0c41kc1mw3" path="res://assets/skin_tones/dark_skin.png" id="11_w48qg"]
 [ext_resource type="Texture2D" uid="uid://dhag0u0woh2rm" path="res://assets/skin_tones/medium_skin.png" id="13_vivmo"]
 [ext_resource type="Texture2D" uid="uid://ju62kdg81c7y" path="res://assets/skin_tones/light_skin.png" id="14_2cqfq"]
+[ext_resource type="Texture2D" uid="uid://bdtqb5dmtjx1r" path="res://assets/eyes/blue_eyes.png" id="16_074og"]
+[ext_resource type="Texture2D" uid="uid://bb62j60tm2sil" path="res://assets/eyes/brown_eyes.png" id="17_cegan"]
+[ext_resource type="Texture2D" uid="uid://dc6453wvsuy7e" path="res://assets/eyes/green_eyes.png" id="18_82xsv"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nwoa8"]
 particles_animation = true
@@ -43,32 +46,26 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmbx4"]
-bg_color = Color(0.6627451, 0.43529412, 0.27058825, 1)
-
-[sub_resource type="GDScript" id="GDScript_vivmo"]
-script/source = "extends Button
-
-@onready var model := %model
-
-func _on_pressed() -> void:
-	model.frame = 1
-"
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ip1k6"]
-bg_color = Color(0.44313726, 0.25882354, 0.1764706, 1)
-
-[sub_resource type="GDScript" id="GDScript_2cqfq"]
-script/source = "extends Button
-
-@onready var model := %model
-
-func _on_pressed() -> void:
-	model.frame = 0
-"
+[sub_resource type="SpriteFrames" id="SpriteFrames_ip1k6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_074og")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_cegan")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_82xsv")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5tm6j"]
 bg_color = Color(0.90588236, 0.7294118, 0.63529414, 1)
+corner_radius_top_right = 100
 
 [sub_resource type="GDScript" id="GDScript_yaehf"]
 script/source = "extends Button
@@ -79,8 +76,35 @@ func _on_pressed() -> void:
 	model.frame = 3
 "
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ip1k6"]
+bg_color = Color(0.44313726, 0.25882354, 0.1764706, 1)
+corner_radius_bottom_left = 100
+
+[sub_resource type="GDScript" id="GDScript_2cqfq"]
+script/source = "extends Button
+
+@onready var model := %model
+
+func _on_pressed() -> void:
+	model.frame = 0
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmbx4"]
+bg_color = Color(0.6627451, 0.43529412, 0.27058825, 1)
+corner_radius_top_left = 100
+
+[sub_resource type="GDScript" id="GDScript_vivmo"]
+script/source = "extends Button
+
+@onready var model := %model
+
+func _on_pressed() -> void:
+	model.frame = 1
+"
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n4aod"]
 bg_color = Color(0.8117647, 0.5882353, 0.45882353, 1)
+corner_radius_bottom_right = 100
 
 [sub_resource type="GDScript" id="GDScript_074og"]
 script/source = "extends Button
@@ -89,6 +113,51 @@ script/source = "extends Button
 
 func _on_pressed() -> void:
 	model.frame = 2
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fcpkw"]
+bg_color = Color(0.41568628, 0.6784314, 0.7529412, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="GDScript" id="GDScript_cegan"]
+script/source = "extends Button
+
+@onready var eyes := %eyes
+
+func _on_pressed() -> void:
+	eyes.frame = 0
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_074og"]
+bg_color = Color(0.4627451, 0.2901961, 0.050980393, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="GDScript" id="GDScript_82xsv"]
+script/source = "extends Button
+
+@onready var eyes := %eyes
+
+func _on_pressed() -> void:
+	eyes.frame = 1
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_getpj"]
+bg_color = Color(0.5176471, 0.7019608, 0.36862746, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="GDScript" id="GDScript_getpj"]
+script/source = "extends Button
+
+@onready var eyes := %eyes
+
+func _on_pressed() -> void:
+	eyes.frame = 2
 "
 
 [node name="dressUpGame" type="Node2D" unique_id=1326834742]
@@ -119,6 +188,12 @@ scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_gmbx4")
 frame = 2
 frame_progress = 0.8088405
+
+[node name="eyes" type="AnimatedSprite2D" parent="." unique_id=1395686714]
+unique_name_in_owner = true
+position = Vector2(-200, 24)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_ip1k6")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2003574125]
 position = Vector2(3, -80)
@@ -163,51 +238,96 @@ scale = Vector2(0.2, 0.2)
 position = Vector2(500, 24)
 scale = Vector2(0.2, 0.2)
 
-[node name="Button" type="Button" parent="." unique_id=102287164]
-offset_left = -570.0
-offset_top = 150.0
-offset_right = -535.0
-offset_bottom = 185.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_gmbx4")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_gmbx4")
-theme_override_styles/hover = SubResource("StyleBoxFlat_gmbx4")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_gmbx4")
-script = SubResource("GDScript_vivmo")
+[node name="skinParent" type="Node2D" parent="." unique_id=1808622998]
+position = Vector2(-484, 155)
+scale = Vector2(1.9200001, 1.9200001)
 
-[node name="Button2" type="Button" parent="." unique_id=349055443]
-offset_left = -568.0
-offset_top = 197.0
-offset_right = -537.0
-offset_bottom = 228.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_ip1k6")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ip1k6")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ip1k6")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_ip1k6")
-script = SubResource("GDScript_2cqfq")
-
-[node name="Button3" type="Button" parent="." unique_id=1877654219]
-offset_left = -528.0
-offset_top = 152.0
-offset_right = -499.0
-offset_bottom = 181.0
+[node name="skin3" type="Button" parent="skinParent" unique_id=1877654219]
+offset_right = 35.0
+offset_bottom = 35.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_5tm6j")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_5tm6j")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5tm6j")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_5tm6j")
 script = SubResource("GDScript_yaehf")
+metadata/_edit_use_anchors_ = true
 
-[node name="Button4" type="Button" parent="." unique_id=1908611914]
-offset_left = -527.0
-offset_top = 199.0
-offset_right = -501.0
-offset_bottom = 225.0
+[node name="skin2" type="Button" parent="skinParent" unique_id=349055443]
+offset_left = -35.0
+offset_top = 35.0
+offset_bottom = 70.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ip1k6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ip1k6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ip1k6")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ip1k6")
+script = SubResource("GDScript_2cqfq")
+metadata/_edit_use_anchors_ = true
+
+[node name="skin1" type="Button" parent="skinParent" unique_id=102287164]
+offset_left = -35.0
+offset_bottom = 35.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_gmbx4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gmbx4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gmbx4")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gmbx4")
+script = SubResource("GDScript_vivmo")
+metadata/_edit_use_anchors_ = true
+
+[node name="skin4" type="Button" parent="skinParent" unique_id=1908611914]
+offset_top = 35.0
+offset_right = 35.0
+offset_bottom = 70.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_n4aod")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_n4aod")
 theme_override_styles/hover = SubResource("StyleBoxFlat_n4aod")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_n4aod")
 script = SubResource("GDScript_074og")
+metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
-[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
-[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
-[connection signal="pressed" from="Button4" to="Button4" method="_on_pressed"]
+[node name="eyesParent" type="Node2D" parent="." unique_id=1671171648]
+position = Vector2(-305, 414.00003)
+rotation = 1.3299736
+scale = Vector2(0.6694351, 0.6694351)
+
+[node name="eyes1" type="Button" parent="eyesParent" unique_id=1968745722]
+offset_left = -536.0
+offset_top = -22.0
+offset_right = -458.0
+offset_bottom = 56.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_fcpkw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fcpkw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fcpkw")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_fcpkw")
+script = SubResource("GDScript_cegan")
+
+[node name="eyes2" type="Button" parent="eyesParent" unique_id=1070552146]
+offset_left = -356.0
+offset_top = 27.000015
+offset_right = -278.0
+offset_bottom = 105.000015
+rotation = 2.1073234
+theme_override_styles/normal = SubResource("StyleBoxFlat_074og")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_074og")
+theme_override_styles/hover = SubResource("StyleBoxFlat_074og")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_074og")
+script = SubResource("GDScript_82xsv")
+
+[node name="eyes3" type="Button" parent="eyesParent" unique_id=1278420119]
+offset_left = -490.00006
+offset_top = 154.00002
+offset_right = -412.00006
+offset_bottom = 232.00002
+rotation = 4.207911
+theme_override_styles/normal = SubResource("StyleBoxFlat_getpj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_getpj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_getpj")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_getpj")
+script = SubResource("GDScript_getpj")
+
+[connection signal="pressed" from="skinParent/skin3" to="skinParent/skin3" method="_on_pressed"]
+[connection signal="pressed" from="skinParent/skin2" to="skinParent/skin2" method="_on_pressed"]
+[connection signal="pressed" from="skinParent/skin1" to="skinParent/skin1" method="_on_pressed"]
+[connection signal="pressed" from="skinParent/skin4" to="skinParent/skin4" method="_on_pressed"]
+[connection signal="pressed" from="eyesParent/eyes1" to="eyesParent/eyes1" method="_on_pressed"]
+[connection signal="pressed" from="eyesParent/eyes2" to="eyesParent/eyes2" method="_on_pressed"]
+[connection signal="pressed" from="eyesParent/eyes3" to="eyesParent/eyes3" method="_on_pressed"]
