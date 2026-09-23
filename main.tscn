@@ -12,13 +12,17 @@
 [ext_resource type="PackedScene" uid="uid://bumrvar0nmqs2" path="res://assets/clothing/sailor_top.tscn" id="7_5vw27"]
 [ext_resource type="PackedScene" uid="uid://uu5wyn42duhc" path="res://assets/clothing/shorts.tscn" id="9_kek77"]
 [ext_resource type="PackedScene" uid="uid://bbqlrw6kfdkks" path="res://assets/clothing/skirt.tscn" id="10_4c57u"]
+[ext_resource type="Texture2D" uid="uid://bwk8vyjfad6ic" path="res://assets/makeup/coral_lips.png" id="10_ryguw"]
+[ext_resource type="Texture2D" uid="uid://co13r6ar2hal8" path="res://assets/makeup/frosted_lips.png" id="11_d13ii"]
 [ext_resource type="PackedScene" uid="uid://cwpeycar4gq5l" path="res://assets/clothing/sweatpants.tscn" id="11_efxa6"]
 [ext_resource type="Texture2D" uid="uid://crm0c41kc1mw3" path="res://assets/skin_tones/dark_skin.png" id="11_w48qg"]
+[ext_resource type="Texture2D" uid="uid://c4hrj57os0f5a" path="res://assets/makeup/red_lips.png" id="12_1u8w0"]
 [ext_resource type="Texture2D" uid="uid://dhag0u0woh2rm" path="res://assets/skin_tones/medium_skin.png" id="13_vivmo"]
 [ext_resource type="Texture2D" uid="uid://ju62kdg81c7y" path="res://assets/skin_tones/light_skin.png" id="14_2cqfq"]
 [ext_resource type="Texture2D" uid="uid://bdtqb5dmtjx1r" path="res://assets/eyes/blue_eyes.png" id="16_074og"]
 [ext_resource type="Texture2D" uid="uid://bb62j60tm2sil" path="res://assets/eyes/brown_eyes.png" id="17_cegan"]
 [ext_resource type="Texture2D" uid="uid://dc6453wvsuy7e" path="res://assets/eyes/green_eyes.png" id="18_82xsv"]
+[ext_resource type="Script" uid="uid://ctmmqikwcx7aw" path="res://scripts/lips.gd" id="23_d13ii"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nwoa8"]
 particles_animation = true
@@ -57,6 +61,23 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("18_82xsv")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5tm6j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_ryguw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_d13ii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1u8w0")
 }],
 "loop": 1,
 "name": &"default",
@@ -160,6 +181,60 @@ func _on_pressed() -> void:
 	eyes.frame = 2
 "
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dpi0j"]
+bg_color = Color(0.8509804, 0.49411765, 0.41960785, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.36136058, 0.2705971, 0.16666478, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="GDScript" id="GDScript_ryguw"]
+script/source = "extends Button
+
+@onready var lips := %lips
+
+func _on_pressed() -> void:
+	lips.frame = 0
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ryguw"]
+bg_color = Color(0.89411765, 0.6392157, 0.5686275, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.36136058, 0.2705971, 0.16666478, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="GDScript" id="GDScript_d13ii"]
+script/source = "extends Button
+
+@onready var lips := %lips
+
+func _on_pressed() -> void:
+	lips.frame = 1
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d13ii"]
+bg_color = Color(0.84313726, 0.36078432, 0.33333334, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.36136058, 0.2705971, 0.16666478, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="dressUpGame" type="Node2D" unique_id=1326834742]
 
 [node name="bg" type="Sprite2D" parent="." unique_id=114402920]
@@ -194,6 +269,12 @@ unique_name_in_owner = true
 position = Vector2(-200, 24)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_ip1k6")
+
+[node name="lips" type="AnimatedSprite2D" parent="." unique_id=474939297]
+unique_name_in_owner = true
+position = Vector2(-200, 24)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_5tm6j")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2003574125]
 position = Vector2(3, -80)
@@ -324,6 +405,43 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_getpj")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_getpj")
 script = SubResource("GDScript_getpj")
 
+[node name="lipsParent" type="Node2D" parent="." unique_id=322891407]
+position = Vector2(188.99998, -5.9999995)
+scale = Vector2(1.3600008, 1.3600008)
+
+[node name="lips1" type="Button" parent="lipsParent" unique_id=1439815267]
+offset_left = -568.0
+offset_top = 49.0
+offset_right = -540.0
+offset_bottom = 77.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_dpi0j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dpi0j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dpi0j")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_dpi0j")
+script = SubResource("GDScript_ryguw")
+
+[node name="lips2" type="Button" parent="lipsParent" unique_id=198628879]
+offset_left = -539.0
+offset_top = 49.0
+offset_right = -511.0
+offset_bottom = 77.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ryguw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ryguw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ryguw")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ryguw")
+script = SubResource("GDScript_d13ii")
+
+[node name="lips3" type="Button" parent="lipsParent" unique_id=819928573]
+offset_left = -510.0
+offset_top = 49.0
+offset_right = -482.0
+offset_bottom = 77.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_d13ii")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_d13ii")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d13ii")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_d13ii")
+script = ExtResource("23_d13ii")
+
 [connection signal="pressed" from="skinParent/skin3" to="skinParent/skin3" method="_on_pressed"]
 [connection signal="pressed" from="skinParent/skin2" to="skinParent/skin2" method="_on_pressed"]
 [connection signal="pressed" from="skinParent/skin1" to="skinParent/skin1" method="_on_pressed"]
@@ -331,3 +449,6 @@ script = SubResource("GDScript_getpj")
 [connection signal="pressed" from="eyesParent/eyes1" to="eyesParent/eyes1" method="_on_pressed"]
 [connection signal="pressed" from="eyesParent/eyes2" to="eyesParent/eyes2" method="_on_pressed"]
 [connection signal="pressed" from="eyesParent/eyes3" to="eyesParent/eyes3" method="_on_pressed"]
+[connection signal="pressed" from="lipsParent/lips1" to="lipsParent/lips1" method="_on_pressed"]
+[connection signal="pressed" from="lipsParent/lips2" to="lipsParent/lips2" method="_on_pressed"]
+[connection signal="pressed" from="lipsParent/lips3" to="lipsParent/lips3" method="_on_pressed"]
