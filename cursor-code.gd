@@ -5,10 +5,10 @@ func _ready() -> void:
 	
 	
 func _physics_process(delta: float) -> void:
-	global_position = lerp(global_position, get_global_mouse_position(), 16.5*delta)
+	global_position = get_global_mouse_position()
 	
-	var desired_roation: float = 100.5 if Input.is_action_pressed("click") else 0.0
+	var desired_roation: float = -12.5 if Input.is_action_pressed("click") else 0.0
 	rotation_degrees = lerp(rotation_degrees, desired_roation, 16.5*delta)
 	
-	var desired_scale: Vector2 = Vector2(0.8,0.8) if Input.is_action_pressed("click") else Vector2(0.4,0.4)
+	var desired_scale: Vector2 = Vector2(0.35,0.35) if Input.is_action_pressed("click") else Vector2(0.4,0.4)
 	scale = lerp(scale, desired_scale, 16.5*delta)
