@@ -32,6 +32,8 @@
 [ext_resource type="PackedScene" uid="uid://c5dedo6ptwli2" path="res://assets/hair/slickback_bun.tscn" id="28_xuqvo"]
 [ext_resource type="PackedScene" uid="uid://6adcegidnm55" path="res://assets/hair/curly_hair.tscn" id="29_seu75"]
 [ext_resource type="PackedScene" uid="uid://bbmyfu2f2dh4v" path="res://assets/hair/blond_hair.tscn" id="30_htxhm"]
+[ext_resource type="Texture2D" uid="uid://6xdrgfuqdvwl" path="res://assets/cursor/cursor256.png" id="33_4k2k6"]
+[ext_resource type="Script" uid="uid://co3rce3h1alrv" path="res://cursor-code.gd" id="34_4k2k6"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nwoa8"]
 particles_animation = true
@@ -590,6 +592,13 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_xuqvo")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_xuqvo")
 script = ExtResource("27_a6jrf")
 metadata/_edit_use_anchors_ = true
+
+[node name="CustomCursor" type="Sprite2D" parent="." unique_id=1892354213]
+z_index = 300
+scale = Vector2(2, 2)
+texture = ExtResource("33_4k2k6")
+offset = Vector2(5, 45)
+script = ExtResource("34_4k2k6")
 
 [connection signal="pressed" from="skinParent/skin3" to="skinParent/skin3" method="_on_pressed"]
 [connection signal="pressed" from="skinParent/skin2" to="skinParent/skin2" method="_on_pressed"]
