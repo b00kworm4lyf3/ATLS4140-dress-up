@@ -34,6 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://bbmyfu2f2dh4v" path="res://assets/hair/blond_hair.tscn" id="30_htxhm"]
 [ext_resource type="Texture2D" uid="uid://6xdrgfuqdvwl" path="res://assets/cursor/cursor256.png" id="33_4k2k6"]
 [ext_resource type="Script" uid="uid://co3rce3h1alrv" path="res://cursor-code.gd" id="34_4k2k6"]
+[ext_resource type="AudioStream" uid="uid://by0mios0wqmew" path="res://assets/background/Nicraftin_-_December_River.wav" id="35_0rl1p"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nwoa8"]
 particles_animation = true
@@ -599,6 +600,11 @@ scale = Vector2(2, 2)
 texture = ExtResource("33_4k2k6")
 offset = Vector2(5, 45)
 script = ExtResource("34_4k2k6")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1756222526]
+stream = ExtResource("35_0rl1p")
+volume_db = -14.0
+autoplay = true
 
 [connection signal="pressed" from="skinParent/skin3" to="skinParent/skin3" method="_on_pressed"]
 [connection signal="pressed" from="skinParent/skin2" to="skinParent/skin2" method="_on_pressed"]
