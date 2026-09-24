@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://d1dwbgwabk3nk"]
+
+[ext_resource type="Texture2D" uid="uid://bvhoxaxthmct4" path="res://assets/hair/ginger_hair.png" id="1_nc1gf"]
+[ext_resource type="Script" uid="uid://cj4tu5m7shb6u" path="res://scripts/drag_and_drop.gd" id="2_jx0kh"]
+[ext_resource type="AudioStream" uid="uid://ogun70e58i1r" path="res://assets/sound/zipclick.wav" id="3_dc25n"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=329895496 groups=["clothing"]]
+texture = ExtResource("1_nc1gf")
+script = ExtResource("2_jx0kh")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1791838675]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=827413150]
+polygon = PackedVector2Array(-331, -37, -377, -328, -358, -424, -314, -523, -319, -688, -406, -924, -388, -1019, -337, -1132, -235, -1203, -143, -1211, -49, -1199, 64, -1144, 127, -1050, 152, -996, 169, -929, 181, -845, 158, -701, 221, -575, 261, -452, 238, -345, 271, -190, 207, -71, 175, -35, 121, 36, 45, -207, 76, -343, 19, -586, 7, -663, 57, -797, 71, -893, -182, -943, -309, -929, -316, -831, -132, -567, -127, -519, -178, -337, -180, -94)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1663053800]
+stream = ExtResource("3_dc25n")
+bus = &"Sound Effects"
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

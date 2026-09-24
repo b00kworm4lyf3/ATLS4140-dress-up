@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b5dqm2t803krj"]
+
+[ext_resource type="Texture2D" uid="uid://dch7cfh4ai4u3" path="res://assets/hair/pixie_hair.png" id="1_ge7nf"]
+[ext_resource type="Script" uid="uid://cj4tu5m7shb6u" path="res://scripts/drag_and_drop.gd" id="2_r81wk"]
+[ext_resource type="AudioStream" uid="uid://ogun70e58i1r" path="res://assets/sound/zipclick.wav" id="3_8fkhc"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=329895496 groups=["clothing"]]
+texture = ExtResource("1_ge7nf")
+script = ExtResource("2_r81wk")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1791838675]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=827413150]
+polygon = PackedVector2Array(-188, -555, -310, -749, -376, -914, -397, -1011, -351, -1120, -241, -1192, -137, -1207, -17, -1167, 50, -1095, 73, -979, 76, -821, 54, -770, 88, -657, 65, -631, 21, -656, 6, -810, 27, -899, -192, -960, -281, -958, -317, -880, -281, -754, -159, -581)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1663053800]
+stream = ExtResource("3_8fkhc")
+bus = &"Sound Effects"
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

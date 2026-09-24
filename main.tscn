@@ -27,6 +27,11 @@
 [ext_resource type="Texture2D" uid="uid://dc6453wvsuy7e" path="res://assets/eyes/green_eyes.png" id="18_82xsv"]
 [ext_resource type="Script" uid="uid://ctmmqikwcx7aw" path="res://scripts/lips.gd" id="23_d13ii"]
 [ext_resource type="Script" uid="uid://ksyhjsaco07j" path="res://scripts/shadow.gd" id="27_a6jrf"]
+[ext_resource type="PackedScene" uid="uid://b5dqm2t803krj" path="res://assets/hair/pixie_hair.tscn" id="27_qsp4k"]
+[ext_resource type="PackedScene" uid="uid://d1dwbgwabk3nk" path="res://assets/hair/ginger_hair.tscn" id="28_kq58d"]
+[ext_resource type="PackedScene" uid="uid://c5dedo6ptwli2" path="res://assets/hair/slickback_bun.tscn" id="28_xuqvo"]
+[ext_resource type="PackedScene" uid="uid://6adcegidnm55" path="res://assets/hair/curly_hair.tscn" id="29_seu75"]
+[ext_resource type="PackedScene" uid="uid://bbmyfu2f2dh4v" path="res://assets/hair/blond_hair.tscn" id="30_htxhm"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nwoa8"]
 particles_animation = true
@@ -398,6 +403,26 @@ scale = Vector2(0.2, 0.2)
 
 [node name="sweatpants" parent="." unique_id=469163298 instance=ExtResource("11_efxa6")]
 position = Vector2(500, 24)
+scale = Vector2(0.2, 0.2)
+
+[node name="slickback_bun" parent="." unique_id=1475286543 instance=ExtResource("28_xuqvo")]
+position = Vector2(200, -25)
+scale = Vector2(0.2, 0.2)
+
+[node name="pixie_hair" parent="." unique_id=1285455945 instance=ExtResource("27_qsp4k")]
+position = Vector2(-200, 24)
+scale = Vector2(0.2, 0.2)
+
+[node name="ginger_hair" parent="." unique_id=896219185 instance=ExtResource("28_kq58d")]
+position = Vector2(300, -25)
+scale = Vector2(0.2, 0.2)
+
+[node name="curly_hair" parent="." unique_id=230160948 instance=ExtResource("29_seu75")]
+position = Vector2(400, -25)
+scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D" parent="." unique_id=2134226055 instance=ExtResource("30_htxhm")]
+position = Vector2(500, -25)
 scale = Vector2(0.2, 0.2)
 
 [node name="skinParent" type="Node2D" parent="." unique_id=1808622998]
