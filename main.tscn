@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://bdtqb5dmtjx1r" path="res://assets/eyes/blue_eyes.png" id="16_074og"]
 [ext_resource type="Texture2D" uid="uid://bb62j60tm2sil" path="res://assets/eyes/brown_eyes.png" id="17_cegan"]
 [ext_resource type="Texture2D" uid="uid://dc6453wvsuy7e" path="res://assets/eyes/green_eyes.png" id="18_82xsv"]
+[ext_resource type="FontFile" uid="uid://bgkr5lmt5k2qo" path="res://assets/background/Cookiemonster-gv11.ttf" id="19_abqjc"]
 [ext_resource type="Script" uid="uid://dddje05nvdhxm" path="res://scripts/done.gd" id="19_f6a44"]
 [ext_resource type="Script" uid="uid://ctmmqikwcx7aw" path="res://scripts/lips.gd" id="23_d13ii"]
 [ext_resource type="Script" uid="uid://ksyhjsaco07j" path="res://scripts/shadow.gd" id="27_a6jrf"]
@@ -764,11 +765,12 @@ offset_left = -50.0
 offset_top = 247.0
 offset_right = 161.0
 offset_bottom = 375.0
-scale = Vector2(0.52, 0.52)
+scale = Vector2(0.5192386, 0.51938677)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 35
+theme_override_fonts/font = ExtResource("19_abqjc")
+theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_svg7e")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_svg7e")
 theme_override_styles/hover = SubResource("StyleBoxFlat_wnkbs")
@@ -926,7 +928,7 @@ volume_db = -14.0
 autoplay = true
 
 [node name="GameText" type="Sprite2D" parent="." unique_id=1578270208]
-position = Vector2(0, -399)
+position = Vector2(0, -407)
 scale = Vector2(0.56000125, 0.56000125)
 texture = ExtResource("51_uypp3")
 
