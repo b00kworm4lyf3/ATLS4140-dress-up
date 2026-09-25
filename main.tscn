@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://bdtqb5dmtjx1r" path="res://assets/eyes/blue_eyes.png" id="16_074og"]
 [ext_resource type="Texture2D" uid="uid://bb62j60tm2sil" path="res://assets/eyes/brown_eyes.png" id="17_cegan"]
 [ext_resource type="Texture2D" uid="uid://dc6453wvsuy7e" path="res://assets/eyes/green_eyes.png" id="18_82xsv"]
+[ext_resource type="Script" uid="uid://dddje05nvdhxm" path="res://scripts/done.gd" id="19_f6a44"]
 [ext_resource type="Script" uid="uid://ctmmqikwcx7aw" path="res://scripts/lips.gd" id="23_d13ii"]
 [ext_resource type="Script" uid="uid://ksyhjsaco07j" path="res://scripts/shadow.gd" id="27_a6jrf"]
 [ext_resource type="Script" uid="uid://c8s02beqpt3lh" path="res://scripts/accessoriesVis.gd" id="27_ok6jj"]
@@ -408,17 +409,21 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="dressUpGame" type="Node2D" unique_id=1326834742]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cs8lx"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=2003574125]
-position = Vector2(3, -80)
+[node name="dressUpGame" type="Node2D" unique_id=1326834742]
 
 [node name="bg" type="Sprite2D" parent="." unique_id=114402920]
 position = Vector2(0, 125)
 scale = Vector2(1.18, 1.18)
 texture = ExtResource("1_vivmo")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2003574125]
+position = Vector2(3, -80)
+
 [node name="ui" type="Node2D" parent="." unique_id=1277886326]
+unique_name_in_owner = true
 
 [node name="accessoriesBox" type="Sprite2D" parent="ui" unique_id=929426395]
 position = Vector2(-462.9386, -310.597)
@@ -751,10 +756,10 @@ script = ExtResource("28_0rl1p")
 worn_tex = ExtResource("40_wnkbs")
 
 [node name="done" type="Button" parent="ui" unique_id=1265856560]
-offset_left = 349.0
-offset_top = -460.0
-offset_right = 560.0
-offset_bottom = -332.0
+offset_left = 235.0
+offset_top = -440.0
+offset_right = 446.0
+offset_bottom = -312.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
@@ -763,6 +768,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_svg7e")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_svg7e")
 theme_override_styles/hover = SubResource("StyleBoxFlat_wnkbs")
 text = "done!"
+script = ExtResource("19_f6a44")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1989285198]
 material = SubResource("CanvasItemMaterial_nwoa8")
@@ -887,6 +893,22 @@ perfect_pos = Vector2(-125, 24)
 unique_name_in_owner = true
 z_index = 20
 
+[node name="backButton" type="Button" parent="." unique_id=1416285407]
+unique_name_in_owner = true
+visible = false
+offset_left = -584.0
+offset_top = 183.0
+offset_right = -498.0
+offset_bottom = 320.0
+theme_override_colors/font_color = Color(1, 0.5372549, 0.77254903, 1)
+theme_override_colors/font_hover_color = Color(1, 0.5372549, 0.77254903, 1)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_cs8lx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cs8lx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cs8lx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cs8lx")
+text = "←"
+
 [connection signal="pressed" from="ui/shadowParent/shadow1" to="ui/shadowParent/shadow1" method="_on_pressed"]
 [connection signal="pressed" from="ui/shadowParent/shadow2" to="ui/shadowParent/shadow2" method="_on_pressed"]
 [connection signal="pressed" from="ui/shadowParent/shadow3" to="ui/shadowParent/shadow3" method="_on_pressed"]
@@ -900,3 +922,4 @@ z_index = 20
 [connection signal="pressed" from="ui/skinParent/skin2" to="ui/skinParent/skin2" method="_on_pressed"]
 [connection signal="pressed" from="ui/skinParent/skin1" to="ui/skinParent/skin1" method="_on_pressed"]
 [connection signal="pressed" from="ui/skinParent/skin4" to="ui/skinParent/skin4" method="_on_pressed"]
+[connection signal="pressed" from="ui/done" to="ui/done" method="_on_pressed"]

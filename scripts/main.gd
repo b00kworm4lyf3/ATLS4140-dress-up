@@ -2,6 +2,7 @@ extends Node
 
 var clothing_list := []
 var click := AudioStreamPlayer.new()
+var done_mode := false
 
 func _ready() -> void:
     clothing_list = get_tree().get_nodes_in_group("clothing")

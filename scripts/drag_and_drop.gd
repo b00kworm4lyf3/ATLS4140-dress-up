@@ -14,6 +14,9 @@ func _process(_delta: float) -> void:
 		position = get_global_mouse_position() - off
 
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
+	if Main.done_mode:
+		return
+		
 	if event is InputEventMouseButton:
 		if event.pressed:
 			var params := PhysicsPointQueryParameters2D.new()
