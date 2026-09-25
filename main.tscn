@@ -51,6 +51,7 @@
 [ext_resource type="Texture2D" uid="uid://bf4k85kyasho" path="res://assets/accessories/anchor_necklace.png" id="40_wnkbs"]
 [ext_resource type="Script" uid="uid://cia2lyknekomi" path="res://scripts/custom_cursor.gd" id="49_0cbny"]
 [ext_resource type="AudioStream" uid="uid://by0mios0wqmew" path="res://assets/sound/Nicraftin_-_December_River.wav" id="50_hrvbo"]
+[ext_resource type="Texture2D" uid="uid://6r7bj54nm5np" path="res://assets/background/game_name.png" id="51_uypp3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6jrf"]
 bg_color = Color(0.85882354, 0.91764706, 0.9098039, 1)
@@ -922,6 +923,11 @@ script = ExtResource("49_0cbny")
 stream = ExtResource("50_hrvbo")
 volume_db = -14.0
 autoplay = true
+
+[node name="GameText" type="Sprite2D" parent="." unique_id=1578270208]
+position = Vector2(-33, -388)
+scale = Vector2(0.56000125, 0.56000125)
+texture = ExtResource("51_uypp3")
 
 [connection signal="pressed" from="ui/shadowParent/shadow1" to="ui/shadowParent/shadow1" method="_on_pressed"]
 [connection signal="pressed" from="ui/shadowParent/shadow2" to="ui/shadowParent/shadow2" method="_on_pressed"]
