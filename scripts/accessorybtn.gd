@@ -10,7 +10,7 @@ func _ready() -> void:
 		
 	sprite = Sprite2D.new()
 	sprite.texture = worn_tex
-	sprite.position = Vector2(-200, 24)
+	sprite.position = Vector2(-125, 24)
 	sprite.scale = Vector2(0.2, 0.2)
 	sprite.visible = false
 	%wornAccessories.add_child.call_deferred(sprite)

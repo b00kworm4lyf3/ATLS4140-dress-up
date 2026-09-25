@@ -48,83 +48,6 @@
 [ext_resource type="Texture2D" uid="uid://k2m1q5a33xur" path="res://assets/accessories/glasses_shading.png" id="35_gngh3"]
 [ext_resource type="Texture2D" uid="uid://bf4k85kyasho" path="res://assets/accessories/anchor_necklace.png" id="40_wnkbs"]
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nwoa8"]
-particles_animation = true
-particles_anim_h_frames = 8
-particles_anim_v_frames = 4
-particles_anim_loop = false
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_gmbx4"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("11_w48qg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("1_ig7tw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_vivmo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_2cqfq")
-}],
-"loop": 0,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_n4aod"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_lswn8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_a6jrf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_xuqvo")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ip1k6"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("16_074og")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_cegan")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_82xsv")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_5tm6j"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("10_ryguw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_d13ii")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_1u8w0")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}]
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6jrf"]
 bg_color = Color(0.85882354, 0.91764706, 0.9098039, 1)
 border_width_left = 2
@@ -384,71 +307,132 @@ region_rect = Rect2(1342.2312, 966.4976, 225.8855, 225.88556)
 texture = ExtResource("40_wnkbs")
 region_rect = Rect2(1257.9164, 937.9163, 401.50488, 401.50494)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_svg7e"]
+bg_color = Color(1, 0.5372549, 0.77254903, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 0.69411767, 0.84705883, 1)
+corner_radius_top_left = 75
+corner_radius_top_right = 75
+corner_radius_bottom_right = 75
+corner_radius_bottom_left = 75
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wnkbs"]
+bg_color = Color(1, 0.69411767, 0.84705883, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 0.5372549, 0.77254903, 1)
+corner_radius_top_left = 75
+corner_radius_top_right = 75
+corner_radius_bottom_right = 75
+corner_radius_bottom_left = 75
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nwoa8"]
+particles_animation = true
+particles_anim_h_frames = 8
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gmbx4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_w48qg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_ig7tw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vivmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_2cqfq")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n4aod"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_lswn8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_a6jrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xuqvo")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ip1k6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_074og")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_cegan")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_82xsv")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5tm6j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_ryguw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_d13ii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1u8w0")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="dressUpGame" type="Node2D" unique_id=1326834742]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2003574125]
+position = Vector2(3, -80)
 
 [node name="bg" type="Sprite2D" parent="." unique_id=114402920]
 position = Vector2(0, 125)
 scale = Vector2(1.18, 1.18)
 texture = ExtResource("1_vivmo")
 
-[node name="optionButtonBox" type="Sprite2D" parent="." unique_id=116323027]
-position = Vector2(-689.00006, 201.00003)
-scale = Vector2(0.8536354, 0.76000124)
-texture = ExtResource("2_jq2sk")
+[node name="ui" type="Node2D" parent="." unique_id=1277886326]
 
-[node name="accessoriesBox" type="Sprite2D" parent="." unique_id=929426395]
-position = Vector2(-491, -296)
+[node name="accessoriesBox" type="Sprite2D" parent="ui" unique_id=929426395]
+position = Vector2(-462.9386, -310.597)
 rotation = 1.5707964
 scale = Vector2(0.6335996, 0.6911989)
 texture = ExtResource("2_jq2sk")
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1989285198]
-material = SubResource("CanvasItemMaterial_nwoa8")
-position = Vector2(37, -57)
-scale = Vector2(6.920001, 3.720001)
-amount = 16
-texture = ExtResource("2_2cqfq")
-emission_shape = 1
-emission_sphere_radius = 103.02
-spread = 120.75
-gravity = Vector2(0, 0)
-scale_amount_min = 1.5
-scale_amount_max = 2.0
-anim_speed_max = 0.3
-
-[node name="model" type="AnimatedSprite2D" parent="." unique_id=765618600]
-unique_name_in_owner = true
-position = Vector2(-200, 24)
-scale = Vector2(0.2, 0.2)
-sprite_frames = SubResource("SpriteFrames_gmbx4")
-frame = 2
-frame_progress = 0.8088405
-
-[node name="shadow" type="AnimatedSprite2D" parent="." unique_id=956061167]
-unique_name_in_owner = true
-position = Vector2(-200, 24)
-scale = Vector2(0.2, 0.2)
-sprite_frames = SubResource("SpriteFrames_n4aod")
-
-[node name="eyes" type="AnimatedSprite2D" parent="." unique_id=1395686714]
-unique_name_in_owner = true
-position = Vector2(-200, 24)
-scale = Vector2(0.2, 0.2)
-sprite_frames = SubResource("SpriteFrames_ip1k6")
-
-[node name="lips" type="AnimatedSprite2D" parent="." unique_id=474939297]
-unique_name_in_owner = true
-position = Vector2(-200, 24)
-scale = Vector2(0.2, 0.2)
-sprite_frames = SubResource("SpriteFrames_5tm6j")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=2003574125]
-position = Vector2(3, -80)
-
-[node name="ui" type="Node2D" parent="." unique_id=1277886326]
+[node name="optionButtonBox" type="Sprite2D" parent="ui" unique_id=116323027]
+position = Vector2(-660.93866, 186.40305)
+scale = Vector2(0.8536354, 0.76000124)
+texture = ExtResource("2_jq2sk")
 
 [node name="shadowParent" type="Node2D" parent="ui" unique_id=2113134686]
-position = Vector2(220.00003, -51)
+position = Vector2(248.06143, -65.596985)
 scale = Vector2(1.3600008, 1.3600008)
 
 [node name="shadow1" type="Button" parent="ui/shadowParent" unique_id=209517193]
@@ -488,7 +472,7 @@ script = ExtResource("27_a6jrf")
 metadata/_edit_use_anchors_ = true
 
 [node name="lipsParent" type="Node2D" parent="ui" unique_id=322891407]
-position = Vector2(203, -10.000008)
+position = Vector2(231.0614, -24.596992)
 scale = Vector2(1.3600008, 1.3600008)
 
 [node name="lips1" type="Button" parent="ui/lipsParent" unique_id=1439815267]
@@ -528,7 +512,7 @@ script = ExtResource("23_d13ii")
 metadata/_edit_use_anchors_ = true
 
 [node name="eyesParent" type="Node2D" parent="ui" unique_id=1671171648]
-position = Vector2(-313, 422)
+position = Vector2(-284.9386, 407.403)
 rotation = 1.3299736
 scale = Vector2(0.6694351, 0.6694351)
 
@@ -568,7 +552,7 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_getpj")
 script = SubResource("GDScript_getpj")
 
 [node name="skinParent" type="Node2D" parent="ui" unique_id=1808622998]
-position = Vector2(-510, 151)
+position = Vector2(-481.9386, 136.40302)
 scale = Vector2(1.9200001, 1.9200001)
 
 [node name="skin3" type="Button" parent="ui/skinParent" unique_id=1877654219]
@@ -614,6 +598,7 @@ script = SubResource("GDScript_074og")
 metadata/_edit_use_anchors_ = true
 
 [node name="accessories" type="Node2D" parent="ui" unique_id=1087828625]
+position = Vector2(28.061401, -14.596985)
 script = ExtResource("27_ok6jj")
 
 [node name="leftButton" type="Button" parent="ui/accessories" unique_id=1448446942]
@@ -765,69 +750,142 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_f6a44")
 script = ExtResource("28_0rl1p")
 worn_tex = ExtResource("40_wnkbs")
 
-[node name="jeans" parent="." unique_id=329895496 instance=ExtResource("2_0xm2m")]
-position = Vector2(-200, 24)
-scale = Vector2(0.19999933, 0.19999933)
+[node name="done" type="Button" parent="ui" unique_id=1265856560]
+offset_left = 349.0
+offset_top = -460.0
+offset_right = 560.0
+offset_bottom = -332.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_svg7e")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_svg7e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wnkbs")
+text = "done!"
 
-[node name="tshirt" parent="." unique_id=449087800 instance=ExtResource("3_h2yge")]
-position = Vector2(-200, 24)
-scale = Vector2(0.19999933, 0.19999933)
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1989285198]
+material = SubResource("CanvasItemMaterial_nwoa8")
+position = Vector2(37, -57)
+scale = Vector2(6.920001, 3.720001)
+amount = 16
+texture = ExtResource("2_2cqfq")
+emission_shape = 1
+emission_sphere_radius = 103.02
+spread = 120.75
+gravity = Vector2(0, 0)
+scale_amount_min = 1.5
+scale_amount_max = 2.0
+anim_speed_max = 0.3
 
-[node name="leggings" parent="." unique_id=293200835 instance=ExtResource("5_lquwl")]
+[node name="model" type="AnimatedSprite2D" parent="." unique_id=765618600]
+unique_name_in_owner = true
+position = Vector2(-125, 24)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_gmbx4")
+frame = 2
+frame_progress = 0.8088405
+
+[node name="shadow" type="AnimatedSprite2D" parent="." unique_id=956061167]
+unique_name_in_owner = true
+position = Vector2(-125, 24)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_n4aod")
+
+[node name="eyes" type="AnimatedSprite2D" parent="." unique_id=1395686714]
+unique_name_in_owner = true
+position = Vector2(-125, 24)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_ip1k6")
+
+[node name="lips" type="AnimatedSprite2D" parent="." unique_id=474939297]
+unique_name_in_owner = true
+position = Vector2(-125, 24)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_5tm6j")
+
+[node name="clothing" type="Node2D" parent="." unique_id=505513257]
+
+[node name="jeans" parent="clothing" unique_id=329895496 instance=ExtResource("2_0xm2m")]
+position = Vector2(-125, 24)
+scale = Vector2(0.19999933, 0.19999933)
+perfect_pos = Vector2(-125, 24)
+
+[node name="tshirt" parent="clothing" unique_id=449087800 instance=ExtResource("3_h2yge")]
+position = Vector2(-125, 24)
+scale = Vector2(0.19999933, 0.19999933)
+perfect_pos = Vector2(-125, 24)
+
+[node name="leggings" parent="clothing" unique_id=293200835 instance=ExtResource("5_lquwl")]
 position = Vector2(200, 24)
 scale = Vector2(0.2, 0.2)
+perfect_pos = Vector2(-125, 24)
 
-[node name="ombre_top" parent="." unique_id=263965214 instance=ExtResource("6_7mycd")]
+[node name="ombre_top" parent="clothing" unique_id=263965214 instance=ExtResource("6_7mycd")]
 position = Vector2(200, -25)
 scale = Vector2(0.2, 0.2)
+perfect_pos = Vector2(-125, 24)
 
-[node name="polka_top" parent="." unique_id=809555960 instance=ExtResource("6_272bh")]
+[node name="polka_top" parent="clothing" unique_id=809555960 instance=ExtResource("6_272bh")]
 position = Vector2(300, -25)
 scale = Vector2(0.2, 0.2)
+perfect_pos = Vector2(-125, 24)
 
-[node name="sailor_top" parent="." unique_id=2007854860 instance=ExtResource("7_5vw27")]
+[node name="sailor_top" parent="clothing" unique_id=2007854860 instance=ExtResource("7_5vw27")]
 position = Vector2(400, -25)
 scale = Vector2(0.2, 0.2)
+perfect_pos = Vector2(-125, 24)
 
-[node name="corset" parent="." unique_id=504652399 instance=ExtResource("4_1bvp3")]
+[node name="corset" parent="clothing" unique_id=504652399 instance=ExtResource("4_1bvp3")]
 position = Vector2(500, -25)
 scale = Vector2(0.19999999, 0.19999999)
+perfect_pos = Vector2(-125, 24)
 
-[node name="shorts" parent="." unique_id=1635342349 instance=ExtResource("9_kek77")]
+[node name="shorts" parent="clothing" unique_id=1635342349 instance=ExtResource("9_kek77")]
 position = Vector2(300, 24)
 scale = Vector2(0.2, 0.2)
+perfect_pos = Vector2(-125, 24)
 
-[node name="skirt" parent="." unique_id=1243000374 instance=ExtResource("10_4c57u")]
+[node name="skirt" parent="clothing" unique_id=1243000374 instance=ExtResource("10_4c57u")]
 position = Vector2(400, 24)
 scale = Vector2(0.2, 0.2)
+perfect_pos = Vector2(-125, 24)
 
-[node name="sweatpants" parent="." unique_id=469163298 instance=ExtResource("11_efxa6")]
+[node name="sweatpants" parent="clothing" unique_id=469163298 instance=ExtResource("11_efxa6")]
 position = Vector2(500, 24)
 scale = Vector2(0.2, 0.2)
+perfect_pos = Vector2(-125, 24)
+
+[node name="hair" type="Node2D" parent="." unique_id=429299708]
+
+[node name="slickback_bun" parent="hair" unique_id=1475286543 instance=ExtResource("28_xuqvo")]
+position = Vector2(200, -25)
+scale = Vector2(0.2, 0.2)
+perfect_pos = Vector2(-125, 24)
+
+[node name="pixie_hair" parent="hair" unique_id=1285455945 instance=ExtResource("27_qsp4k")]
+position = Vector2(-125, 24)
+scale = Vector2(0.2, 0.2)
+perfect_pos = Vector2(-125, 24)
+
+[node name="ginger_hair" parent="hair" unique_id=896219185 instance=ExtResource("28_kq58d")]
+position = Vector2(300, -25)
+scale = Vector2(0.2, 0.2)
+perfect_pos = Vector2(-125, 24)
+
+[node name="curly_hair" parent="hair" unique_id=230160948 instance=ExtResource("29_seu75")]
+position = Vector2(400, -25)
+scale = Vector2(0.2, 0.2)
+perfect_pos = Vector2(-125, 24)
+
+[node name="blond_hair" parent="hair" unique_id=2134226055 instance=ExtResource("30_htxhm")]
+position = Vector2(500, -25)
+scale = Vector2(0.2, 0.2)
+perfect_pos = Vector2(-125, 24)
 
 [node name="wornAccessories" type="Node2D" parent="." unique_id=177226524]
 unique_name_in_owner = true
 z_index = 20
-
-[node name="slickback_bun" parent="." unique_id=1475286543 instance=ExtResource("28_xuqvo")]
-position = Vector2(200, -25)
-scale = Vector2(0.2, 0.2)
-
-[node name="pixie_hair" parent="." unique_id=1285455945 instance=ExtResource("27_qsp4k")]
-position = Vector2(-200, 24)
-scale = Vector2(0.2, 0.2)
-
-[node name="ginger_hair" parent="." unique_id=896219185 instance=ExtResource("28_kq58d")]
-position = Vector2(300, -25)
-scale = Vector2(0.2, 0.2)
-
-[node name="curly_hair" parent="." unique_id=230160948 instance=ExtResource("29_seu75")]
-position = Vector2(400, -25)
-scale = Vector2(0.2, 0.2)
-
-[node name="blond_hair" parent="." unique_id=2134226055 instance=ExtResource("30_htxhm")]
-position = Vector2(500, -25)
-scale = Vector2(0.2, 0.2)
 
 [connection signal="pressed" from="ui/shadowParent/shadow1" to="ui/shadowParent/shadow1" method="_on_pressed"]
 [connection signal="pressed" from="ui/shadowParent/shadow2" to="ui/shadowParent/shadow2" method="_on_pressed"]
