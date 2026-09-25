@@ -125,156 +125,59 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4k2k6"]
-bg_color = Color(1, 0.5372549, 0.77254903, 0)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6jrf"]
+bg_color = Color(0.85882354, 0.91764706, 0.9098039, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.36136058, 0.2705971, 0.16666478, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jq2sk"]
-bg_color = Color(1, 0.76862746, 0.8745098, 0)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gmbx4"]
-texture = ExtResource("28_ok6jj")
-region_rect = Rect2(1565.0453, 661.81586, 38.384277, 38.384277)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b1qrp"]
-texture = ExtResource("30_facbu")
-region_rect = Rect2(1533.157, 674.8074, 131.09961, 131.09967)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4lmeg"]
-texture = ExtResource("31_h8e4i")
-region_rect = Rect2(1522.8163, 669.6, 140.70691, 140.70703)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wnkbs"]
-texture = ExtResource("32_qnost")
-region_rect = Rect2(1518.912, 673.80347, 140.70691, 140.70703)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_come4"]
-texture = ExtResource("31_b1qrp")
-region_rect = Rect2(1116.4824, 1033.5945, 131.09961, 131.09967)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d2t1y"]
-texture = ExtResource("33_0cp0l")
-region_rect = Rect2(1100.8927, 1025.7996, 174.13245, 174.13245)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qnost"]
-texture = ExtResource("34_0n3wm")
-region_rect = Rect2(1745.6569, 2075.9304, 216.9729, 216.9729)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0n3wm"]
-texture = ExtResource("35_gngh3")
-region_rect = Rect2(1131.2196, 459.6972, 476.6858, 476.68585)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gngh3"]
-texture = ExtResource("34_d2t1y")
-region_rect = Rect2(1131.2196, 459.6972, 476.6858, 476.68585)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h8e4i"]
-texture = ExtResource("32_come4")
-region_rect = Rect2(1316.2009, 915.6654, 269.8839, 269.88403)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0cp0l"]
-texture = ExtResource("34_4lmeg")
-region_rect = Rect2(1342.2312, 966.4976, 225.8855, 225.88556)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f6a44"]
-texture = ExtResource("40_wnkbs")
-region_rect = Rect2(1257.9164, 937.9163, 401.50488, 401.50494)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5tm6j"]
-bg_color = Color(0.90588236, 0.7294118, 0.63529414, 1)
-corner_radius_top_right = 100
-
-[sub_resource type="GDScript" id="GDScript_yaehf"]
+[sub_resource type="GDScript" id="GDScript_lswn8"]
 script/source = "extends Button
 
-@onready var model := %model
+@onready var shadow := %shadow
 
 func _on_pressed() -> void:
-	model.frame = 3
+	shadow.frame = 0
 "
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ip1k6"]
-bg_color = Color(0.44313726, 0.25882354, 0.1764706, 1)
-corner_radius_bottom_left = 100
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lswn8"]
+bg_color = Color(0.92156863, 0.62352943, 0.56078434, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.36136058, 0.2705971, 0.16666478, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
-[sub_resource type="GDScript" id="GDScript_2cqfq"]
+[sub_resource type="GDScript" id="GDScript_a6jrf"]
 script/source = "extends Button
 
-@onready var model := %model
+@onready var shadow := %shadow
 
 func _on_pressed() -> void:
-	model.frame = 0
+	shadow.frame = 1
 "
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmbx4"]
-bg_color = Color(0.6627451, 0.43529412, 0.27058825, 1)
-corner_radius_top_left = 100
-
-[sub_resource type="GDScript" id="GDScript_vivmo"]
-script/source = "extends Button
-
-@onready var model := %model
-
-func _on_pressed() -> void:
-	model.frame = 1
-"
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n4aod"]
-bg_color = Color(0.8117647, 0.5882353, 0.45882353, 1)
-corner_radius_bottom_right = 100
-
-[sub_resource type="GDScript" id="GDScript_074og"]
-script/source = "extends Button
-
-@onready var model := %model
-
-func _on_pressed() -> void:
-	model.frame = 2
-"
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fcpkw"]
-bg_color = Color(0.41568628, 0.6784314, 0.7529412, 1)
-corner_radius_top_left = 50
-corner_radius_top_right = 100
-corner_radius_bottom_left = 100
-
-[sub_resource type="GDScript" id="GDScript_cegan"]
-script/source = "extends Button
-
-@onready var eyes := %eyes
-
-func _on_pressed() -> void:
-	eyes.frame = 0
-"
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_074og"]
-bg_color = Color(0.4627451, 0.2901961, 0.050980393, 1)
-corner_radius_top_left = 50
-corner_radius_top_right = 100
-corner_radius_bottom_left = 100
-
-[sub_resource type="GDScript" id="GDScript_82xsv"]
-script/source = "extends Button
-
-@onready var eyes := %eyes
-
-func _on_pressed() -> void:
-	eyes.frame = 1
-"
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_getpj"]
-bg_color = Color(0.5176471, 0.7019608, 0.36862746, 1)
-corner_radius_top_left = 50
-corner_radius_top_right = 100
-corner_radius_bottom_left = 100
-
-[sub_resource type="GDScript" id="GDScript_getpj"]
-script/source = "extends Button
-
-@onready var eyes := %eyes
-
-func _on_pressed() -> void:
-	eyes.frame = 2
-"
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xuqvo"]
+bg_color = Color(0.93333334, 0.74509805, 0.9372549, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.36136058, 0.2705971, 0.16666478, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dpi0j"]
 bg_color = Color(0.8509804, 0.49411765, 0.41960785, 1)
@@ -330,59 +233,156 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6jrf"]
-bg_color = Color(0.85882354, 0.91764706, 0.9098039, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.36136058, 0.2705971, 0.16666478, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fcpkw"]
+bg_color = Color(0.41568628, 0.6784314, 0.7529412, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 100
+corner_radius_bottom_left = 100
 
-[sub_resource type="GDScript" id="GDScript_lswn8"]
+[sub_resource type="GDScript" id="GDScript_cegan"]
 script/source = "extends Button
 
-@onready var shadow := %shadow
+@onready var eyes := %eyes
 
 func _on_pressed() -> void:
-	shadow.frame = 0
+	eyes.frame = 0
 "
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lswn8"]
-bg_color = Color(0.92156863, 0.62352943, 0.56078434, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.36136058, 0.2705971, 0.16666478, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_074og"]
+bg_color = Color(0.4627451, 0.2901961, 0.050980393, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 100
+corner_radius_bottom_left = 100
 
-[sub_resource type="GDScript" id="GDScript_a6jrf"]
+[sub_resource type="GDScript" id="GDScript_82xsv"]
 script/source = "extends Button
 
-@onready var shadow := %shadow
+@onready var eyes := %eyes
 
 func _on_pressed() -> void:
-	shadow.frame = 1
+	eyes.frame = 1
 "
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xuqvo"]
-bg_color = Color(0.93333334, 0.74509805, 0.9372549, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.36136058, 0.2705971, 0.16666478, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_getpj"]
+bg_color = Color(0.5176471, 0.7019608, 0.36862746, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="GDScript" id="GDScript_getpj"]
+script/source = "extends Button
+
+@onready var eyes := %eyes
+
+func _on_pressed() -> void:
+	eyes.frame = 2
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5tm6j"]
+bg_color = Color(0.90588236, 0.7294118, 0.63529414, 1)
+corner_radius_top_right = 100
+
+[sub_resource type="GDScript" id="GDScript_yaehf"]
+script/source = "extends Button
+
+@onready var model := %model
+
+func _on_pressed() -> void:
+	model.frame = 3
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ip1k6"]
+bg_color = Color(0.44313726, 0.25882354, 0.1764706, 1)
+corner_radius_bottom_left = 100
+
+[sub_resource type="GDScript" id="GDScript_2cqfq"]
+script/source = "extends Button
+
+@onready var model := %model
+
+func _on_pressed() -> void:
+	model.frame = 0
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmbx4"]
+bg_color = Color(0.6627451, 0.43529412, 0.27058825, 1)
+corner_radius_top_left = 100
+
+[sub_resource type="GDScript" id="GDScript_vivmo"]
+script/source = "extends Button
+
+@onready var model := %model
+
+func _on_pressed() -> void:
+	model.frame = 1
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n4aod"]
+bg_color = Color(0.8117647, 0.5882353, 0.45882353, 1)
+corner_radius_bottom_right = 100
+
+[sub_resource type="GDScript" id="GDScript_074og"]
+script/source = "extends Button
+
+@onready var model := %model
+
+func _on_pressed() -> void:
+	model.frame = 2
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4k2k6"]
+bg_color = Color(1, 0.5372549, 0.77254903, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jq2sk"]
+bg_color = Color(1, 0.76862746, 0.8745098, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gmbx4"]
+texture = ExtResource("28_ok6jj")
+region_rect = Rect2(1565.0453, 661.81586, 38.384277, 38.384277)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b1qrp"]
+texture = ExtResource("30_facbu")
+region_rect = Rect2(1533.157, 674.8074, 131.09961, 131.09967)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4lmeg"]
+texture = ExtResource("31_h8e4i")
+region_rect = Rect2(1522.8163, 669.6, 140.70691, 140.70703)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wnkbs"]
+texture = ExtResource("32_qnost")
+region_rect = Rect2(1518.912, 673.80347, 140.70691, 140.70703)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_come4"]
+texture = ExtResource("31_b1qrp")
+region_rect = Rect2(1116.4824, 1033.5945, 131.09961, 131.09967)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d2t1y"]
+texture = ExtResource("33_0cp0l")
+region_rect = Rect2(1100.8927, 1025.7996, 174.13245, 174.13245)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qnost"]
+texture = ExtResource("34_0n3wm")
+region_rect = Rect2(1745.6569, 2075.9304, 216.9729, 216.9729)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0n3wm"]
+texture = ExtResource("35_gngh3")
+region_rect = Rect2(1131.2196, 459.6972, 476.6858, 476.68585)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gngh3"]
+texture = ExtResource("34_d2t1y")
+region_rect = Rect2(1131.2196, 459.6972, 476.6858, 476.68585)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h8e4i"]
+texture = ExtResource("32_come4")
+region_rect = Rect2(1316.2009, 915.6654, 269.8839, 269.88403)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0cp0l"]
+texture = ExtResource("34_4lmeg")
+region_rect = Rect2(1342.2312, 966.4976, 225.8855, 225.88556)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f6a44"]
+texture = ExtResource("40_wnkbs")
+region_rect = Rect2(1257.9164, 937.9163, 401.50488, 401.50494)
 
 [node name="dressUpGame" type="Node2D" unique_id=1326834742]
 
@@ -445,6 +445,326 @@ sprite_frames = SubResource("SpriteFrames_5tm6j")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2003574125]
 position = Vector2(3, -80)
 
+[node name="ui" type="Node2D" parent="." unique_id=1277886326]
+
+[node name="shadowParent" type="Node2D" parent="ui" unique_id=2113134686]
+position = Vector2(220.00003, -51)
+scale = Vector2(1.3600008, 1.3600008)
+
+[node name="shadow1" type="Button" parent="ui/shadowParent" unique_id=209517193]
+offset_left = -568.0
+offset_top = 49.0
+offset_right = -540.0
+offset_bottom = 77.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_a6jrf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_a6jrf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_a6jrf")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_a6jrf")
+script = SubResource("GDScript_lswn8")
+metadata/_edit_use_anchors_ = true
+
+[node name="shadow2" type="Button" parent="ui/shadowParent" unique_id=932865250]
+offset_left = -539.0
+offset_top = 49.0
+offset_right = -511.0
+offset_bottom = 77.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_lswn8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lswn8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lswn8")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_lswn8")
+script = SubResource("GDScript_a6jrf")
+metadata/_edit_use_anchors_ = true
+
+[node name="shadow3" type="Button" parent="ui/shadowParent" unique_id=661714420]
+offset_left = -510.0
+offset_top = 49.0
+offset_right = -482.0
+offset_bottom = 77.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_xuqvo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xuqvo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xuqvo")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_xuqvo")
+script = ExtResource("27_a6jrf")
+metadata/_edit_use_anchors_ = true
+
+[node name="lipsParent" type="Node2D" parent="ui" unique_id=322891407]
+position = Vector2(203, -10.000008)
+scale = Vector2(1.3600008, 1.3600008)
+
+[node name="lips1" type="Button" parent="ui/lipsParent" unique_id=1439815267]
+offset_left = -568.0
+offset_top = 49.0
+offset_right = -540.0
+offset_bottom = 77.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_dpi0j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dpi0j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dpi0j")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_dpi0j")
+script = SubResource("GDScript_ryguw")
+metadata/_edit_use_anchors_ = true
+
+[node name="lips2" type="Button" parent="ui/lipsParent" unique_id=198628879]
+offset_left = -539.0
+offset_top = 49.0
+offset_right = -511.0
+offset_bottom = 77.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ryguw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ryguw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ryguw")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ryguw")
+script = SubResource("GDScript_d13ii")
+metadata/_edit_use_anchors_ = true
+
+[node name="lips3" type="Button" parent="ui/lipsParent" unique_id=819928573]
+offset_left = -510.0
+offset_top = 49.0
+offset_right = -482.0
+offset_bottom = 77.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_d13ii")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_d13ii")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d13ii")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_d13ii")
+script = ExtResource("23_d13ii")
+metadata/_edit_use_anchors_ = true
+
+[node name="eyesParent" type="Node2D" parent="ui" unique_id=1671171648]
+position = Vector2(-313, 422)
+rotation = 1.3299736
+scale = Vector2(0.6694351, 0.6694351)
+
+[node name="eyes1" type="Button" parent="ui/eyesParent" unique_id=1968745722]
+offset_left = -536.0
+offset_top = -22.0
+offset_right = -458.0
+offset_bottom = 56.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_fcpkw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fcpkw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fcpkw")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_fcpkw")
+script = SubResource("GDScript_cegan")
+
+[node name="eyes2" type="Button" parent="ui/eyesParent" unique_id=1070552146]
+offset_left = -356.0
+offset_top = 27.000015
+offset_right = -278.0
+offset_bottom = 105.000015
+rotation = 2.1073234
+theme_override_styles/normal = SubResource("StyleBoxFlat_074og")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_074og")
+theme_override_styles/hover = SubResource("StyleBoxFlat_074og")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_074og")
+script = SubResource("GDScript_82xsv")
+
+[node name="eyes3" type="Button" parent="ui/eyesParent" unique_id=1278420119]
+offset_left = -490.00006
+offset_top = 154.00002
+offset_right = -412.00006
+offset_bottom = 232.00002
+rotation = 4.207911
+theme_override_styles/normal = SubResource("StyleBoxFlat_getpj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_getpj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_getpj")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_getpj")
+script = SubResource("GDScript_getpj")
+
+[node name="skinParent" type="Node2D" parent="ui" unique_id=1808622998]
+position = Vector2(-510, 151)
+scale = Vector2(1.9200001, 1.9200001)
+
+[node name="skin3" type="Button" parent="ui/skinParent" unique_id=1877654219]
+offset_right = 35.0
+offset_bottom = 35.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5tm6j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5tm6j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5tm6j")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_5tm6j")
+script = SubResource("GDScript_yaehf")
+metadata/_edit_use_anchors_ = true
+
+[node name="skin2" type="Button" parent="ui/skinParent" unique_id=349055443]
+offset_left = -35.0
+offset_top = 35.0
+offset_bottom = 70.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ip1k6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ip1k6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ip1k6")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ip1k6")
+script = SubResource("GDScript_2cqfq")
+metadata/_edit_use_anchors_ = true
+
+[node name="skin1" type="Button" parent="ui/skinParent" unique_id=102287164]
+offset_left = -35.0
+offset_bottom = 35.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_gmbx4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gmbx4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gmbx4")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gmbx4")
+script = SubResource("GDScript_vivmo")
+metadata/_edit_use_anchors_ = true
+
+[node name="skin4" type="Button" parent="ui/skinParent" unique_id=1908611914]
+offset_top = 35.0
+offset_right = 35.0
+offset_bottom = 70.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_n4aod")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n4aod")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n4aod")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_n4aod")
+script = SubResource("GDScript_074og")
+metadata/_edit_use_anchors_ = true
+
+[node name="accessories" type="Node2D" parent="ui" unique_id=1087828625]
+script = ExtResource("27_ok6jj")
+
+[node name="leftButton" type="Button" parent="ui/accessories" unique_id=1448446942]
+offset_left = -582.0
+offset_top = -157.0
+offset_right = -562.0
+offset_bottom = -108.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.5372549, 0.77254903, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_4k2k6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4k2k6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jq2sk")
+text = "<"
+metadata/_edit_use_anchors_ = true
+
+[node name="rightButton" type="Button" parent="ui/accessories" unique_id=1868692954]
+offset_left = -323.0
+offset_top = -157.0
+offset_right = -303.0
+offset_bottom = -108.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.5372549, 0.77254903, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_4k2k6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4k2k6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jq2sk")
+text = ">"
+metadata/_edit_use_anchors_ = true
+
+[node name="pages" type="Node2D" parent="ui/accessories" unique_id=390641535]
+
+[node name="earrings" type="Node2D" parent="ui/accessories/pages" unique_id=663610999]
+visible = false
+
+[node name="stud_earrings" type="Button" parent="ui/accessories/pages/earrings" unique_id=1652610959]
+offset_left = -463.0
+offset_top = -199.0
+offset_right = -415.0
+offset_bottom = -151.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_gmbx4")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("28_ok6jj")
+
+[node name="pink_hoop" type="Button" parent="ui/accessories/pages/earrings" unique_id=2139174208]
+offset_left = -551.0
+offset_top = -170.0
+offset_right = -480.0
+offset_bottom = -99.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_b1qrp")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("30_facbu")
+
+[node name="heart_earring" type="Button" parent="ui/accessories/pages/earrings" unique_id=1896011885]
+offset_left = -395.0
+offset_top = -171.0
+offset_right = -324.0
+offset_bottom = -100.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_4lmeg")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("31_h8e4i")
+
+[node name="blue_earring" type="Button" parent="ui/accessories/pages/earrings" unique_id=1262985139]
+offset_left = -473.0
+offset_top = -140.0
+offset_right = -402.0
+offset_bottom = -69.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_wnkbs")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("32_qnost")
+
+[node name="bracelets" type="Node2D" parent="ui/accessories/pages" unique_id=1953214313]
+visible = false
+
+[node name="silver_bracelet" type="Button" parent="ui/accessories/pages/bracelets" unique_id=954215705]
+offset_left = -387.0
+offset_top = -142.0
+offset_right = -316.0
+offset_bottom = -71.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_come4")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("31_b1qrp")
+
+[node name="gold_bracelet" type="Button" parent="ui/accessories/pages/bracelets" unique_id=548255753]
+offset_left = -468.0
+offset_top = -198.0
+offset_right = -397.0
+offset_bottom = -127.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_d2t1y")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("33_0cp0l")
+
+[node name="colorful_bangles" type="Button" parent="ui/accessories/pages/bracelets" unique_id=1680153646]
+offset_left = -544.0
+offset_top = -144.0
+offset_right = -473.0
+offset_bottom = -73.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_qnost")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("34_0n3wm")
+
+[node name="glasses" type="Node2D" parent="ui/accessories/pages" unique_id=388511320]
+visible = false
+
+[node name="glasses_shading" type="Button" parent="ui/accessories/pages/glasses" unique_id=1917920394]
+offset_left = -432.0
+offset_top = -186.0
+offset_right = -333.0
+offset_bottom = -87.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n3wm")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("35_gngh3")
+
+[node name="glasses" type="Button" parent="ui/accessories/pages/glasses" unique_id=858603785]
+offset_left = -544.0
+offset_top = -186.0
+offset_right = -445.0
+offset_bottom = -87.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_gngh3")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("34_d2t1y")
+
+[node name="necklaces" type="Node2D" parent="ui/accessories/pages" unique_id=1295933803]
+
+[node name="pearl_necklace" type="Button" parent="ui/accessories/pages/necklaces" unique_id=1316635738]
+offset_left = -421.0
+offset_top = -137.0
+offset_right = -337.0
+offset_bottom = -53.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_h8e4i")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("32_come4")
+
+[node name="gold_necklace" type="Button" parent="ui/accessories/pages/necklaces" unique_id=1570604709]
+offset_left = -477.0
+offset_top = -212.0
+offset_right = -393.0
+offset_bottom = -128.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_0cp0l")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("34_4lmeg")
+
+[node name="anchor_necklace" type="Button" parent="ui/accessories/pages/necklaces" unique_id=854959781]
+offset_left = -552.0
+offset_top = -158.0
+offset_right = -468.0
+offset_bottom = -74.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_f6a44")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("40_wnkbs")
+
 [node name="jeans" parent="." unique_id=329895496 instance=ExtResource("2_0xm2m")]
 position = Vector2(-200, 24)
 scale = Vector2(0.19999933, 0.19999933)
@@ -487,158 +807,7 @@ scale = Vector2(0.2, 0.2)
 
 [node name="wornAccessories" type="Node2D" parent="." unique_id=177226524]
 unique_name_in_owner = true
-
-[node name="accessories" type="Node2D" parent="." unique_id=1087828625]
-script = ExtResource("27_ok6jj")
-
-[node name="leftButton" type="Button" parent="accessories" unique_id=1448446942]
-offset_left = -582.0
-offset_top = -157.0
-offset_right = -562.0
-offset_bottom = -108.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 0.5372549, 0.77254903, 1)
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_4k2k6")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_4k2k6")
-theme_override_styles/hover = SubResource("StyleBoxFlat_jq2sk")
-text = "<"
-metadata/_edit_use_anchors_ = true
-
-[node name="rightButton" type="Button" parent="accessories" unique_id=1868692954]
-offset_left = -323.0
-offset_top = -157.0
-offset_right = -303.0
-offset_bottom = -108.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 0.5372549, 0.77254903, 1)
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_4k2k6")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_4k2k6")
-theme_override_styles/hover = SubResource("StyleBoxFlat_jq2sk")
-text = ">"
-metadata/_edit_use_anchors_ = true
-
-[node name="pages" type="Node2D" parent="accessories" unique_id=390641535]
-
-[node name="earrings" type="Node2D" parent="accessories/pages" unique_id=663610999]
-visible = false
-
-[node name="stud_earrings" type="Button" parent="accessories/pages/earrings" unique_id=1652610959]
-offset_left = -463.0
-offset_top = -199.0
-offset_right = -415.0
-offset_bottom = -151.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_gmbx4")
-script = ExtResource("28_0rl1p")
-worn_tex = ExtResource("28_ok6jj")
-
-[node name="pink_hoop" type="Button" parent="accessories/pages/earrings" unique_id=2139174208]
-offset_left = -551.0
-offset_top = -170.0
-offset_right = -480.0
-offset_bottom = -99.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_b1qrp")
-script = ExtResource("28_0rl1p")
-worn_tex = ExtResource("30_facbu")
-
-[node name="heart_earring" type="Button" parent="accessories/pages/earrings" unique_id=1896011885]
-offset_left = -395.0
-offset_top = -171.0
-offset_right = -324.0
-offset_bottom = -100.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_4lmeg")
-script = ExtResource("28_0rl1p")
-worn_tex = ExtResource("31_h8e4i")
-
-[node name="blue_earring" type="Button" parent="accessories/pages/earrings" unique_id=1262985139]
-offset_left = -473.0
-offset_top = -140.0
-offset_right = -402.0
-offset_bottom = -69.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_wnkbs")
-script = ExtResource("28_0rl1p")
-worn_tex = ExtResource("32_qnost")
-
-[node name="bracelets" type="Node2D" parent="accessories/pages" unique_id=1953214313]
-visible = false
-
-[node name="silver_bracelet" type="Button" parent="accessories/pages/bracelets" unique_id=954215705]
-offset_left = -387.0
-offset_top = -142.0
-offset_right = -316.0
-offset_bottom = -71.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_come4")
-script = ExtResource("28_0rl1p")
-worn_tex = ExtResource("31_b1qrp")
-
-[node name="gold_bracelet" type="Button" parent="accessories/pages/bracelets" unique_id=548255753]
-offset_left = -468.0
-offset_top = -198.0
-offset_right = -397.0
-offset_bottom = -127.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_d2t1y")
-script = ExtResource("28_0rl1p")
-worn_tex = ExtResource("33_0cp0l")
-
-[node name="colorful_bangles" type="Button" parent="accessories/pages/bracelets" unique_id=1680153646]
-offset_left = -544.0
-offset_top = -144.0
-offset_right = -473.0
-offset_bottom = -73.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_qnost")
-script = ExtResource("28_0rl1p")
-worn_tex = ExtResource("34_0n3wm")
-
-[node name="glasses" type="Node2D" parent="accessories/pages" unique_id=388511320]
-visible = false
-
-[node name="glasses_shading" type="Button" parent="accessories/pages/glasses" unique_id=1917920394]
-offset_left = -432.0
-offset_top = -186.0
-offset_right = -333.0
-offset_bottom = -87.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_0n3wm")
-script = ExtResource("28_0rl1p")
-worn_tex = ExtResource("35_gngh3")
-
-[node name="glasses" type="Button" parent="accessories/pages/glasses" unique_id=858603785]
-offset_left = -544.0
-offset_top = -186.0
-offset_right = -445.0
-offset_bottom = -87.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_gngh3")
-script = ExtResource("28_0rl1p")
-worn_tex = ExtResource("34_d2t1y")
-
-[node name="necklaces" type="Node2D" parent="accessories/pages" unique_id=1295933803]
-
-[node name="pearl_necklace" type="Button" parent="accessories/pages/necklaces" unique_id=1316635738]
-offset_left = -421.0
-offset_top = -137.0
-offset_right = -337.0
-offset_bottom = -53.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_h8e4i")
-script = ExtResource("28_0rl1p")
-worn_tex = ExtResource("32_come4")
-
-[node name="gold_necklace" type="Button" parent="accessories/pages/necklaces" unique_id=1570604709]
-offset_left = -477.0
-offset_top = -212.0
-offset_right = -393.0
-offset_bottom = -128.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_0cp0l")
-script = ExtResource("28_0rl1p")
-worn_tex = ExtResource("34_4lmeg")
-
-[node name="anchor_necklace" type="Button" parent="accessories/pages/necklaces" unique_id=854959781]
-offset_left = -552.0
-offset_top = -158.0
-offset_right = -468.0
-offset_bottom = -74.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_f6a44")
-script = ExtResource("28_0rl1p")
-worn_tex = ExtResource("40_wnkbs")
+z_index = 20
 
 [node name="slickback_bun" parent="." unique_id=1475286543 instance=ExtResource("28_xuqvo")]
 position = Vector2(200, -25)
@@ -660,182 +829,16 @@ scale = Vector2(0.2, 0.2)
 position = Vector2(500, -25)
 scale = Vector2(0.2, 0.2)
 
-[node name="skinParent" type="Node2D" parent="." unique_id=1808622998]
-position = Vector2(-510, 151)
-scale = Vector2(1.9200001, 1.9200001)
-
-[node name="skin3" type="Button" parent="skinParent" unique_id=1877654219]
-offset_right = 35.0
-offset_bottom = 35.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_5tm6j")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5tm6j")
-theme_override_styles/hover = SubResource("StyleBoxFlat_5tm6j")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_5tm6j")
-script = SubResource("GDScript_yaehf")
-metadata/_edit_use_anchors_ = true
-
-[node name="skin2" type="Button" parent="skinParent" unique_id=349055443]
-offset_left = -35.0
-offset_top = 35.0
-offset_bottom = 70.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_ip1k6")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ip1k6")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ip1k6")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_ip1k6")
-script = SubResource("GDScript_2cqfq")
-metadata/_edit_use_anchors_ = true
-
-[node name="skin1" type="Button" parent="skinParent" unique_id=102287164]
-offset_left = -35.0
-offset_bottom = 35.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_gmbx4")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_gmbx4")
-theme_override_styles/hover = SubResource("StyleBoxFlat_gmbx4")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_gmbx4")
-script = SubResource("GDScript_vivmo")
-metadata/_edit_use_anchors_ = true
-
-[node name="skin4" type="Button" parent="skinParent" unique_id=1908611914]
-offset_top = 35.0
-offset_right = 35.0
-offset_bottom = 70.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_n4aod")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_n4aod")
-theme_override_styles/hover = SubResource("StyleBoxFlat_n4aod")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_n4aod")
-script = SubResource("GDScript_074og")
-metadata/_edit_use_anchors_ = true
-
-[node name="eyesParent" type="Node2D" parent="." unique_id=1671171648]
-position = Vector2(-313, 422)
-rotation = 1.3299736
-scale = Vector2(0.6694351, 0.6694351)
-
-[node name="eyes1" type="Button" parent="eyesParent" unique_id=1968745722]
-offset_left = -536.0
-offset_top = -22.0
-offset_right = -458.0
-offset_bottom = 56.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_fcpkw")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_fcpkw")
-theme_override_styles/hover = SubResource("StyleBoxFlat_fcpkw")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_fcpkw")
-script = SubResource("GDScript_cegan")
-
-[node name="eyes2" type="Button" parent="eyesParent" unique_id=1070552146]
-offset_left = -356.0
-offset_top = 27.000015
-offset_right = -278.0
-offset_bottom = 105.000015
-rotation = 2.1073234
-theme_override_styles/normal = SubResource("StyleBoxFlat_074og")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_074og")
-theme_override_styles/hover = SubResource("StyleBoxFlat_074og")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_074og")
-script = SubResource("GDScript_82xsv")
-
-[node name="eyes3" type="Button" parent="eyesParent" unique_id=1278420119]
-offset_left = -490.00006
-offset_top = 154.00002
-offset_right = -412.00006
-offset_bottom = 232.00002
-rotation = 4.207911
-theme_override_styles/normal = SubResource("StyleBoxFlat_getpj")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_getpj")
-theme_override_styles/hover = SubResource("StyleBoxFlat_getpj")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_getpj")
-script = SubResource("GDScript_getpj")
-
-[node name="lipsParent" type="Node2D" parent="." unique_id=322891407]
-position = Vector2(203, -10.000008)
-scale = Vector2(1.3600008, 1.3600008)
-
-[node name="lips1" type="Button" parent="lipsParent" unique_id=1439815267]
-offset_left = -568.0
-offset_top = 49.0
-offset_right = -540.0
-offset_bottom = 77.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_dpi0j")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_dpi0j")
-theme_override_styles/hover = SubResource("StyleBoxFlat_dpi0j")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_dpi0j")
-script = SubResource("GDScript_ryguw")
-metadata/_edit_use_anchors_ = true
-
-[node name="lips2" type="Button" parent="lipsParent" unique_id=198628879]
-offset_left = -539.0
-offset_top = 49.0
-offset_right = -511.0
-offset_bottom = 77.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_ryguw")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ryguw")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ryguw")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_ryguw")
-script = SubResource("GDScript_d13ii")
-metadata/_edit_use_anchors_ = true
-
-[node name="lips3" type="Button" parent="lipsParent" unique_id=819928573]
-offset_left = -510.0
-offset_top = 49.0
-offset_right = -482.0
-offset_bottom = 77.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_d13ii")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_d13ii")
-theme_override_styles/hover = SubResource("StyleBoxFlat_d13ii")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_d13ii")
-script = ExtResource("23_d13ii")
-metadata/_edit_use_anchors_ = true
-
-[node name="shadowParent" type="Node2D" parent="." unique_id=2113134686]
-position = Vector2(220.00003, -51)
-scale = Vector2(1.3600008, 1.3600008)
-
-[node name="shadow1" type="Button" parent="shadowParent" unique_id=209517193]
-offset_left = -568.0
-offset_top = 49.0
-offset_right = -540.0
-offset_bottom = 77.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_a6jrf")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_a6jrf")
-theme_override_styles/hover = SubResource("StyleBoxFlat_a6jrf")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_a6jrf")
-script = SubResource("GDScript_lswn8")
-metadata/_edit_use_anchors_ = true
-
-[node name="shadow2" type="Button" parent="shadowParent" unique_id=932865250]
-offset_left = -539.0
-offset_top = 49.0
-offset_right = -511.0
-offset_bottom = 77.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_lswn8")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_lswn8")
-theme_override_styles/hover = SubResource("StyleBoxFlat_lswn8")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_lswn8")
-script = SubResource("GDScript_a6jrf")
-metadata/_edit_use_anchors_ = true
-
-[node name="shadow3" type="Button" parent="shadowParent" unique_id=661714420]
-offset_left = -510.0
-offset_top = 49.0
-offset_right = -482.0
-offset_bottom = 77.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_xuqvo")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_xuqvo")
-theme_override_styles/hover = SubResource("StyleBoxFlat_xuqvo")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_xuqvo")
-script = ExtResource("27_a6jrf")
-metadata/_edit_use_anchors_ = true
-
-[connection signal="pressed" from="skinParent/skin3" to="skinParent/skin3" method="_on_pressed"]
-[connection signal="pressed" from="skinParent/skin2" to="skinParent/skin2" method="_on_pressed"]
-[connection signal="pressed" from="skinParent/skin1" to="skinParent/skin1" method="_on_pressed"]
-[connection signal="pressed" from="skinParent/skin4" to="skinParent/skin4" method="_on_pressed"]
-[connection signal="pressed" from="eyesParent/eyes1" to="eyesParent/eyes1" method="_on_pressed"]
-[connection signal="pressed" from="eyesParent/eyes2" to="eyesParent/eyes2" method="_on_pressed"]
-[connection signal="pressed" from="eyesParent/eyes3" to="eyesParent/eyes3" method="_on_pressed"]
-[connection signal="pressed" from="lipsParent/lips1" to="lipsParent/lips1" method="_on_pressed"]
-[connection signal="pressed" from="lipsParent/lips2" to="lipsParent/lips2" method="_on_pressed"]
-[connection signal="pressed" from="lipsParent/lips3" to="lipsParent/lips3" method="_on_pressed"]
-[connection signal="pressed" from="shadowParent/shadow1" to="shadowParent/shadow1" method="_on_pressed"]
-[connection signal="pressed" from="shadowParent/shadow2" to="shadowParent/shadow2" method="_on_pressed"]
-[connection signal="pressed" from="shadowParent/shadow3" to="shadowParent/shadow3" method="_on_pressed"]
+[connection signal="pressed" from="ui/shadowParent/shadow1" to="ui/shadowParent/shadow1" method="_on_pressed"]
+[connection signal="pressed" from="ui/shadowParent/shadow2" to="ui/shadowParent/shadow2" method="_on_pressed"]
+[connection signal="pressed" from="ui/shadowParent/shadow3" to="ui/shadowParent/shadow3" method="_on_pressed"]
+[connection signal="pressed" from="ui/lipsParent/lips1" to="ui/lipsParent/lips1" method="_on_pressed"]
+[connection signal="pressed" from="ui/lipsParent/lips2" to="ui/lipsParent/lips2" method="_on_pressed"]
+[connection signal="pressed" from="ui/lipsParent/lips3" to="ui/lipsParent/lips3" method="_on_pressed"]
+[connection signal="pressed" from="ui/eyesParent/eyes1" to="ui/eyesParent/eyes1" method="_on_pressed"]
+[connection signal="pressed" from="ui/eyesParent/eyes2" to="ui/eyesParent/eyes2" method="_on_pressed"]
+[connection signal="pressed" from="ui/eyesParent/eyes3" to="ui/eyesParent/eyes3" method="_on_pressed"]
+[connection signal="pressed" from="ui/skinParent/skin3" to="ui/skinParent/skin3" method="_on_pressed"]
+[connection signal="pressed" from="ui/skinParent/skin2" to="ui/skinParent/skin2" method="_on_pressed"]
+[connection signal="pressed" from="ui/skinParent/skin1" to="ui/skinParent/skin1" method="_on_pressed"]
+[connection signal="pressed" from="ui/skinParent/skin4" to="ui/skinParent/skin4" method="_on_pressed"]
