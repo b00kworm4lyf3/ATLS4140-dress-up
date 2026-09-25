@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://by0mios0wqmew"
-path="res://.godot/imported/Nicraftin_-_December_River.wav-86f9ea76cd57be80f5843d87351b65bf.sample"
+path="res://.godot/imported/Nicraftin_-_December_River.wav-fb36e7e620c9f2e98a0dd1f37b24d169.sample"
 
 [deps]
 
-source_file="res://assets/background/Nicraftin_-_December_River.wav"
-dest_files=["res://.godot/imported/Nicraftin_-_December_River.wav-86f9ea76cd57be80f5843d87351b65bf.sample"]
+source_file="res://assets/sound/Nicraftin_-_December_River.wav"
+dest_files=["res://.godot/imported/Nicraftin_-_December_River.wav-fb36e7e620c9f2e98a0dd1f37b24d169.sample"]
 
 [params]
 

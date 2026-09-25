@@ -42,11 +42,14 @@
 [ext_resource type="Texture2D" uid="uid://b3vu2vydcp5n2" path="res://assets/accessories/pearl_necklace.png" id="32_come4"]
 [ext_resource type="Texture2D" uid="uid://bvw00y0gdmh2u" path="res://assets/accessories/blue_earring.png" id="32_qnost"]
 [ext_resource type="Texture2D" uid="uid://cuwh0f2vbbywd" path="res://assets/accessories/gold_bracelet.png" id="33_0cp0l"]
+[ext_resource type="Texture2D" uid="uid://6xdrgfuqdvwl" path="res://assets/cursor/cursor256.png" id="33_4k2k6"]
 [ext_resource type="Texture2D" uid="uid://cuksahncsfae6" path="res://assets/accessories/colorful_bangles.png" id="34_0n3wm"]
 [ext_resource type="Texture2D" uid="uid://bchh1lhppluhg" path="res://assets/accessories/gold_necklace.png" id="34_4lmeg"]
 [ext_resource type="Texture2D" uid="uid://dl372kjxxlhjx" path="res://assets/accessories/glasses.png" id="34_d2t1y"]
 [ext_resource type="Texture2D" uid="uid://k2m1q5a33xur" path="res://assets/accessories/glasses_shading.png" id="35_gngh3"]
 [ext_resource type="Texture2D" uid="uid://bf4k85kyasho" path="res://assets/accessories/anchor_necklace.png" id="40_wnkbs"]
+[ext_resource type="Script" uid="uid://cia2lyknekomi" path="res://scripts/custom_cursor.gd" id="49_0cbny"]
+[ext_resource type="AudioStream" uid="uid://by0mios0wqmew" path="res://assets/sound/Nicraftin_-_December_River.wav" id="50_hrvbo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6jrf"]
 bg_color = Color(0.85882354, 0.91764706, 0.9098039, 1)
@@ -886,6 +889,17 @@ perfect_pos = Vector2(-125, 24)
 [node name="wornAccessories" type="Node2D" parent="." unique_id=177226524]
 unique_name_in_owner = true
 z_index = 20
+
+[node name="CustomCursor" type="Sprite2D" parent="." unique_id=248569309]
+z_index = 200
+texture = ExtResource("33_4k2k6")
+offset = Vector2(5, 35)
+script = ExtResource("49_0cbny")
+
+[node name="BGMusic" type="AudioStreamPlayer2D" parent="." unique_id=927629946]
+stream = ExtResource("50_hrvbo")
+volume_db = -14.0
+autoplay = true
 
 [connection signal="pressed" from="ui/shadowParent/shadow1" to="ui/shadowParent/shadow1" method="_on_pressed"]
 [connection signal="pressed" from="ui/shadowParent/shadow2" to="ui/shadowParent/shadow2" method="_on_pressed"]
