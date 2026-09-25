@@ -40,7 +40,13 @@
 [ext_resource type="Texture2D" uid="uid://du38bgrcay5ft" path="res://assets/accessories/silver_bracelet.png" id="31_b1qrp"]
 [ext_resource type="Texture2D" uid="uid://dwaemcnb7rhu7" path="res://assets/accessories/heart_earring.png" id="31_h8e4i"]
 [ext_resource type="Texture2D" uid="uid://b3vu2vydcp5n2" path="res://assets/accessories/pearl_necklace.png" id="32_come4"]
+[ext_resource type="Texture2D" uid="uid://bvw00y0gdmh2u" path="res://assets/accessories/blue_earring.png" id="32_qnost"]
+[ext_resource type="Texture2D" uid="uid://cuwh0f2vbbywd" path="res://assets/accessories/gold_bracelet.png" id="33_0cp0l"]
+[ext_resource type="Texture2D" uid="uid://cuksahncsfae6" path="res://assets/accessories/colorful_bangles.png" id="34_0n3wm"]
 [ext_resource type="Texture2D" uid="uid://bchh1lhppluhg" path="res://assets/accessories/gold_necklace.png" id="34_4lmeg"]
+[ext_resource type="Texture2D" uid="uid://dl372kjxxlhjx" path="res://assets/accessories/glasses.png" id="34_d2t1y"]
+[ext_resource type="Texture2D" uid="uid://k2m1q5a33xur" path="res://assets/accessories/glasses_shading.png" id="35_gngh3"]
+[ext_resource type="Texture2D" uid="uid://bf4k85kyasho" path="res://assets/accessories/anchor_necklace.png" id="40_wnkbs"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nwoa8"]
 particles_animation = true
@@ -137,9 +143,29 @@ region_rect = Rect2(1533.157, 674.8074, 131.09961, 131.09967)
 texture = ExtResource("31_h8e4i")
 region_rect = Rect2(1522.8163, 669.6, 140.70691, 140.70703)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wnkbs"]
+texture = ExtResource("32_qnost")
+region_rect = Rect2(1518.912, 673.80347, 140.70691, 140.70703)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_come4"]
 texture = ExtResource("31_b1qrp")
 region_rect = Rect2(1116.4824, 1033.5945, 131.09961, 131.09967)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d2t1y"]
+texture = ExtResource("33_0cp0l")
+region_rect = Rect2(1100.8927, 1025.7996, 174.13245, 174.13245)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qnost"]
+texture = ExtResource("34_0n3wm")
+region_rect = Rect2(1745.6569, 2075.9304, 216.9729, 216.9729)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0n3wm"]
+texture = ExtResource("35_gngh3")
+region_rect = Rect2(1131.2196, 459.6972, 476.6858, 476.68585)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gngh3"]
+texture = ExtResource("34_d2t1y")
+region_rect = Rect2(1131.2196, 459.6972, 476.6858, 476.68585)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h8e4i"]
 texture = ExtResource("32_come4")
@@ -148,6 +174,10 @@ region_rect = Rect2(1316.2009, 915.6654, 269.8839, 269.88403)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0cp0l"]
 texture = ExtResource("34_4lmeg")
 region_rect = Rect2(1342.2312, 966.4976, 225.8855, 225.88556)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f6a44"]
+texture = ExtResource("40_wnkbs")
+region_rect = Rect2(1257.9164, 937.9163, 401.50488, 401.50494)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5tm6j"]
 bg_color = Color(0.90588236, 0.7294118, 0.63529414, 1)
@@ -521,6 +551,15 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_4lmeg")
 script = ExtResource("28_0rl1p")
 worn_tex = ExtResource("31_h8e4i")
 
+[node name="blue_earring" type="Button" parent="accessories/pages/earrings" unique_id=1262985139]
+offset_left = -473.0
+offset_top = -140.0
+offset_right = -402.0
+offset_bottom = -69.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_wnkbs")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("32_qnost")
+
 [node name="bracelets" type="Node2D" parent="accessories/pages" unique_id=1953214313]
 visible = false
 
@@ -533,27 +572,73 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_come4")
 script = ExtResource("28_0rl1p")
 worn_tex = ExtResource("31_b1qrp")
 
+[node name="gold_bracelet" type="Button" parent="accessories/pages/bracelets" unique_id=548255753]
+offset_left = -468.0
+offset_top = -198.0
+offset_right = -397.0
+offset_bottom = -127.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_d2t1y")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("33_0cp0l")
+
+[node name="colorful_bangles" type="Button" parent="accessories/pages/bracelets" unique_id=1680153646]
+offset_left = -544.0
+offset_top = -144.0
+offset_right = -473.0
+offset_bottom = -73.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_qnost")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("34_0n3wm")
+
 [node name="glasses" type="Node2D" parent="accessories/pages" unique_id=388511320]
+visible = false
+
+[node name="glasses_shading" type="Button" parent="accessories/pages/glasses" unique_id=1917920394]
+offset_left = -432.0
+offset_top = -186.0
+offset_right = -333.0
+offset_bottom = -87.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n3wm")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("35_gngh3")
+
+[node name="glasses" type="Button" parent="accessories/pages/glasses" unique_id=858603785]
+offset_left = -544.0
+offset_top = -186.0
+offset_right = -445.0
+offset_bottom = -87.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_gngh3")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("34_d2t1y")
 
 [node name="necklaces" type="Node2D" parent="accessories/pages" unique_id=1295933803]
 
 [node name="pearl_necklace" type="Button" parent="accessories/pages/necklaces" unique_id=1316635738]
-offset_left = -479.0
-offset_top = -211.0
-offset_right = -395.0
-offset_bottom = -127.0
+offset_left = -421.0
+offset_top = -137.0
+offset_right = -337.0
+offset_bottom = -53.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_h8e4i")
 script = ExtResource("28_0rl1p")
 worn_tex = ExtResource("32_come4")
 
 [node name="gold_necklace" type="Button" parent="accessories/pages/necklaces" unique_id=1570604709]
-offset_left = -551.0
-offset_top = -160.0
-offset_right = -467.0
-offset_bottom = -76.0
+offset_left = -477.0
+offset_top = -212.0
+offset_right = -393.0
+offset_bottom = -128.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_0cp0l")
 script = ExtResource("28_0rl1p")
 worn_tex = ExtResource("34_4lmeg")
+
+[node name="anchor_necklace" type="Button" parent="accessories/pages/necklaces" unique_id=854959781]
+offset_left = -552.0
+offset_top = -158.0
+offset_right = -468.0
+offset_bottom = -74.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_f6a44")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("40_wnkbs")
 
 [node name="slickback_bun" parent="." unique_id=1475286543 instance=ExtResource("28_xuqvo")]
 position = Vector2(200, -25)
