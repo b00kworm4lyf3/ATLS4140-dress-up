@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cvag3f2r6tick" path="res://assets/background/game_bg.jpg" id="1_vivmo"]
 [ext_resource type="PackedScene" uid="uid://dmyk266ahglcf" path="res://assets/clothing/jeans.tscn" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://byvumhbn3ldv8" path="res://assets/background/sparkles.png" id="2_2cqfq"]
+[ext_resource type="Texture2D" uid="uid://b60mlidmt0siw" path="res://assets/background/box.png" id="2_jq2sk"]
 [ext_resource type="PackedScene" uid="uid://cnhpgirvlyyi3" path="res://assets/clothing/tshirt.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dmpbi3qlou5ds" path="res://assets/clothing/corset.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bsa4decfmad32" path="res://assets/clothing/leggings.tscn" id="5_lquwl"]
@@ -27,14 +28,19 @@
 [ext_resource type="Texture2D" uid="uid://dc6453wvsuy7e" path="res://assets/eyes/green_eyes.png" id="18_82xsv"]
 [ext_resource type="Script" uid="uid://ctmmqikwcx7aw" path="res://scripts/lips.gd" id="23_d13ii"]
 [ext_resource type="Script" uid="uid://ksyhjsaco07j" path="res://scripts/shadow.gd" id="27_a6jrf"]
+[ext_resource type="Script" uid="uid://c8s02beqpt3lh" path="res://scripts/accessoriesVis.gd" id="27_ok6jj"]
 [ext_resource type="PackedScene" uid="uid://b5dqm2t803krj" path="res://assets/hair/pixie_hair.tscn" id="27_qsp4k"]
+[ext_resource type="Script" uid="uid://dmbeewcgh7bmg" path="res://scripts/accessorybtn.gd" id="28_0rl1p"]
 [ext_resource type="PackedScene" uid="uid://d1dwbgwabk3nk" path="res://assets/hair/ginger_hair.tscn" id="28_kq58d"]
+[ext_resource type="Texture2D" uid="uid://cx1f8r0jbc3uq" path="res://assets/accessories/stud_earrings.png" id="28_ok6jj"]
 [ext_resource type="PackedScene" uid="uid://c5dedo6ptwli2" path="res://assets/hair/slickback_bun.tscn" id="28_xuqvo"]
 [ext_resource type="PackedScene" uid="uid://6adcegidnm55" path="res://assets/hair/curly_hair.tscn" id="29_seu75"]
+[ext_resource type="Texture2D" uid="uid://brvd7chl8qadl" path="res://assets/accessories/pink_hoop.png" id="30_facbu"]
 [ext_resource type="PackedScene" uid="uid://bbmyfu2f2dh4v" path="res://assets/hair/blond_hair.tscn" id="30_htxhm"]
-[ext_resource type="Texture2D" uid="uid://6xdrgfuqdvwl" path="res://assets/cursor/cursor256.png" id="33_4k2k6"]
-[ext_resource type="Script" uid="uid://co3rce3h1alrv" path="res://cursor-code.gd" id="34_4k2k6"]
-[ext_resource type="AudioStream" uid="uid://by0mios0wqmew" path="res://assets/background/Nicraftin_-_December_River.wav" id="35_0rl1p"]
+[ext_resource type="Texture2D" uid="uid://du38bgrcay5ft" path="res://assets/accessories/silver_bracelet.png" id="31_b1qrp"]
+[ext_resource type="Texture2D" uid="uid://dwaemcnb7rhu7" path="res://assets/accessories/heart_earring.png" id="31_h8e4i"]
+[ext_resource type="Texture2D" uid="uid://b3vu2vydcp5n2" path="res://assets/accessories/pearl_necklace.png" id="32_come4"]
+[ext_resource type="Texture2D" uid="uid://bchh1lhppluhg" path="res://assets/accessories/gold_necklace.png" id="34_4lmeg"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nwoa8"]
 particles_animation = true
@@ -112,6 +118,36 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4k2k6"]
+bg_color = Color(1, 0.5372549, 0.77254903, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jq2sk"]
+bg_color = Color(1, 0.76862746, 0.8745098, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gmbx4"]
+texture = ExtResource("28_ok6jj")
+region_rect = Rect2(1565.0453, 661.81586, 38.384277, 38.384277)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b1qrp"]
+texture = ExtResource("30_facbu")
+region_rect = Rect2(1533.157, 674.8074, 131.09961, 131.09967)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4lmeg"]
+texture = ExtResource("31_h8e4i")
+region_rect = Rect2(1522.8163, 669.6, 140.70691, 140.70703)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_come4"]
+texture = ExtResource("31_b1qrp")
+region_rect = Rect2(1116.4824, 1033.5945, 131.09961, 131.09967)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h8e4i"]
+texture = ExtResource("32_come4")
+region_rect = Rect2(1316.2009, 915.6654, 269.8839, 269.88403)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0cp0l"]
+texture = ExtResource("34_4lmeg")
+region_rect = Rect2(1342.2312, 966.4976, 225.8855, 225.88556)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5tm6j"]
 bg_color = Color(0.90588236, 0.7294118, 0.63529414, 1)
@@ -325,6 +361,17 @@ position = Vector2(0, 125)
 scale = Vector2(1.18, 1.18)
 texture = ExtResource("1_vivmo")
 
+[node name="optionButtonBox" type="Sprite2D" parent="." unique_id=116323027]
+position = Vector2(-689.00006, 201.00003)
+scale = Vector2(0.8536354, 0.76000124)
+texture = ExtResource("2_jq2sk")
+
+[node name="accessoriesBox" type="Sprite2D" parent="." unique_id=929426395]
+position = Vector2(-491, -296)
+rotation = 1.5707964
+scale = Vector2(0.6335996, 0.6911989)
+texture = ExtResource("2_jq2sk")
+
 [node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1989285198]
 material = SubResource("CanvasItemMaterial_nwoa8")
 position = Vector2(37, -57)
@@ -408,6 +455,106 @@ scale = Vector2(0.2, 0.2)
 position = Vector2(500, 24)
 scale = Vector2(0.2, 0.2)
 
+[node name="wornAccessories" type="Node2D" parent="." unique_id=177226524]
+unique_name_in_owner = true
+
+[node name="accessories" type="Node2D" parent="." unique_id=1087828625]
+script = ExtResource("27_ok6jj")
+
+[node name="leftButton" type="Button" parent="accessories" unique_id=1448446942]
+offset_left = -582.0
+offset_top = -157.0
+offset_right = -562.0
+offset_bottom = -108.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.5372549, 0.77254903, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_4k2k6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4k2k6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jq2sk")
+text = "<"
+metadata/_edit_use_anchors_ = true
+
+[node name="rightButton" type="Button" parent="accessories" unique_id=1868692954]
+offset_left = -323.0
+offset_top = -157.0
+offset_right = -303.0
+offset_bottom = -108.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.5372549, 0.77254903, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_4k2k6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4k2k6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jq2sk")
+text = ">"
+metadata/_edit_use_anchors_ = true
+
+[node name="pages" type="Node2D" parent="accessories" unique_id=390641535]
+
+[node name="earrings" type="Node2D" parent="accessories/pages" unique_id=663610999]
+visible = false
+
+[node name="stud_earrings" type="Button" parent="accessories/pages/earrings" unique_id=1652610959]
+offset_left = -463.0
+offset_top = -199.0
+offset_right = -415.0
+offset_bottom = -151.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_gmbx4")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("28_ok6jj")
+
+[node name="pink_hoop" type="Button" parent="accessories/pages/earrings" unique_id=2139174208]
+offset_left = -551.0
+offset_top = -170.0
+offset_right = -480.0
+offset_bottom = -99.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_b1qrp")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("30_facbu")
+
+[node name="heart_earring" type="Button" parent="accessories/pages/earrings" unique_id=1896011885]
+offset_left = -395.0
+offset_top = -171.0
+offset_right = -324.0
+offset_bottom = -100.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_4lmeg")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("31_h8e4i")
+
+[node name="bracelets" type="Node2D" parent="accessories/pages" unique_id=1953214313]
+visible = false
+
+[node name="silver_bracelet" type="Button" parent="accessories/pages/bracelets" unique_id=954215705]
+offset_left = -387.0
+offset_top = -142.0
+offset_right = -316.0
+offset_bottom = -71.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_come4")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("31_b1qrp")
+
+[node name="glasses" type="Node2D" parent="accessories/pages" unique_id=388511320]
+
+[node name="necklaces" type="Node2D" parent="accessories/pages" unique_id=1295933803]
+
+[node name="pearl_necklace" type="Button" parent="accessories/pages/necklaces" unique_id=1316635738]
+offset_left = -479.0
+offset_top = -211.0
+offset_right = -395.0
+offset_bottom = -127.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_h8e4i")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("32_come4")
+
+[node name="gold_necklace" type="Button" parent="accessories/pages/necklaces" unique_id=1570604709]
+offset_left = -551.0
+offset_top = -160.0
+offset_right = -467.0
+offset_bottom = -76.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_0cp0l")
+script = ExtResource("28_0rl1p")
+worn_tex = ExtResource("34_4lmeg")
+
 [node name="slickback_bun" parent="." unique_id=1475286543 instance=ExtResource("28_xuqvo")]
 position = Vector2(200, -25)
 scale = Vector2(0.2, 0.2)
@@ -424,12 +571,12 @@ scale = Vector2(0.2, 0.2)
 position = Vector2(400, -25)
 scale = Vector2(0.2, 0.2)
 
-[node name="Sprite2D" parent="." unique_id=2134226055 instance=ExtResource("30_htxhm")]
+[node name="blond_hair" parent="." unique_id=2134226055 instance=ExtResource("30_htxhm")]
 position = Vector2(500, -25)
 scale = Vector2(0.2, 0.2)
 
 [node name="skinParent" type="Node2D" parent="." unique_id=1808622998]
-position = Vector2(-484, 155)
+position = Vector2(-510, 151)
 scale = Vector2(1.9200001, 1.9200001)
 
 [node name="skin3" type="Button" parent="skinParent" unique_id=1877654219]
@@ -475,7 +622,7 @@ script = SubResource("GDScript_074og")
 metadata/_edit_use_anchors_ = true
 
 [node name="eyesParent" type="Node2D" parent="." unique_id=1671171648]
-position = Vector2(-305, 414.00003)
+position = Vector2(-313, 422)
 rotation = 1.3299736
 scale = Vector2(0.6694351, 0.6694351)
 
@@ -515,7 +662,7 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_getpj")
 script = SubResource("GDScript_getpj")
 
 [node name="lipsParent" type="Node2D" parent="." unique_id=322891407]
-position = Vector2(188.99998, -5.9999995)
+position = Vector2(203, -10.000008)
 scale = Vector2(1.3600008, 1.3600008)
 
 [node name="lips1" type="Button" parent="lipsParent" unique_id=1439815267]
@@ -555,7 +702,7 @@ script = ExtResource("23_d13ii")
 metadata/_edit_use_anchors_ = true
 
 [node name="shadowParent" type="Node2D" parent="." unique_id=2113134686]
-position = Vector2(206.00002, -46.999992)
+position = Vector2(220.00003, -51)
 scale = Vector2(1.3600008, 1.3600008)
 
 [node name="shadow1" type="Button" parent="shadowParent" unique_id=209517193]
@@ -593,18 +740,6 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_xuqvo")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_xuqvo")
 script = ExtResource("27_a6jrf")
 metadata/_edit_use_anchors_ = true
-
-[node name="CustomCursor" type="Sprite2D" parent="." unique_id=1892354213]
-z_index = 300
-scale = Vector2(2, 2)
-texture = ExtResource("33_4k2k6")
-offset = Vector2(5, 45)
-script = ExtResource("34_4k2k6")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1756222526]
-stream = ExtResource("35_0rl1p")
-volume_db = -14.0
-autoplay = true
 
 [connection signal="pressed" from="skinParent/skin3" to="skinParent/skin3" method="_on_pressed"]
 [connection signal="pressed" from="skinParent/skin2" to="skinParent/skin2" method="_on_pressed"]

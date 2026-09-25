@@ -9,7 +9,7 @@
 Art, background, and cursor design by Jadynn
 
 Juice!
-- Click Sound (Sage)
+- Click Sound (Sage - 45 minutes) 
 - Music (Jadynn)
 - Custom Cursor (Jadynn)
 - Particle System (Both of us!)
