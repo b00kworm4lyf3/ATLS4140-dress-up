@@ -9,8 +9,9 @@
 Art, background, and cursor design by Jadynn
 
 Juice!
-- Click Sound (Sage - 45 minutes) 
-- Music (Jadynn)
-- Custom Cursor (Jadynn)
+- Click Sound (Sage - 45 minutes)
+- Custom Art (Jadynn - 5.5 hours)
+- Music (Jadynn - 20 mins)
+- Custom Cursor (Jadynn - 45 mins)
 - Particle System (Both of us!)
 - 'Done' Button with screenshot page (Sage - 2.5 hours)
