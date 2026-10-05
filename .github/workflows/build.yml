@@ -15,6 +15,11 @@ env:
   GODOT_BASE_URL: "https://github.com/godotengine/godot/releases/download"
   WEB_PRESET:     "Web"
 
+  ITCHIO_USERNAME: "jonaswills"
+  ITCHIO_GAME: "dress-up-test"
+  WINDOWS_PRESET: "Windows"  
+
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -50,8 +55,8 @@ jobs:
         wget -q $base/Godot_v${GODOT_VERSION}_export_templates.tpz -O templates.tpz
         mkdir -p /tmp/tpl && unzip -q templates.tpz -d /tmp/tpl
         for F in /tmp/tpl/templates/*; do
-          mkdir -p ~/.local/share/godot/export_templates/${GODOT_VERSION}
-          cp "$F"   ~/.local/share/godot/export_templates/${GODOT_VERSION}/
+          mkdir -p ~/.local/share/godot/export_templates/4.7.2.stable
+          cp "$F"   ~/.local/share/godot/export_templates/4.7.2.stable/
         done
 
     # — export HTML5 —
@@ -65,6 +70,72 @@ jobs:
     - uses: actions/upload-pages-artifact@v3
       with:
         path: builds/web        # this becomes the Pages content
+
+
+    - name: Export Windows (Release)
+      run: |
+        mkdir -p "builds/windows"
+        ~/godot/Godot_v${GODOT_VERSION}_linux.x86_64 --verbose --headless \
+          --export-release "${WINDOWS_PRESET}" "builds/windows/dress-up.exe"
+
+
+    - name: Zip Windows build
+      run: |
+        cd "builds/windows"
+        zip -r ../dress-up_windows.zip .
+        cd -          
+
+    - name: Install butler
+      run: |
+        curl -L https://broth.itch.zone/butler/linux-amd64/LATEST/archive/default > butler.zip
+        unzip -oq butler.zip -d $HOME/.local/bin
+        chmod +x $HOME/.local/bin/butler
+
+
+    - name: Compute version label
+      id: ver
+      shell: bash
+      run: |
+        if [ -f VERSION.txt ]; then
+          echo "v=$(cat VERSION.txt)" >> $GITHUB_OUTPUT
+        else
+          # strip leading 'refs/tags/' and use the tag (v1.2.3)
+          echo "v=${GITHUB_REF_NAME}" >> $GITHUB_OUTPUT
+        fi
+
+    - name: "Push to itch.io (channel: windows)"
+      env:
+        BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
+      run: |
+        $HOME/.local/bin/butler push builds/dress-up_windows.zip \
+          "${ITCHIO_USERNAME}/${ITCHIO_GAME}:windows" \
+          --userversion "${{ steps.ver.outputs.v }}"
+
+
+    # — export macOS —
+    - name: Export macOS (Release)
+      env:
+        MAC_PRESET: "macOS"               # or "macOS (Universal)" if that's your preset name
+      run: |
+        mkdir -p "builds/macos"
+        ~/godot/Godot_v${GODOT_VERSION}_linux.x86_64 --verbose --headless \
+          --export-release "${MAC_PRESET}" "builds/macos/Dress-up.app"
+
+    - name: Zip macOS build
+      run: |
+        cd "builds/macos"
+        # Zip the .app bundle so butler uploads a single archive
+        zip -r ../dress-up_macos.zip "Dress-up.app"
+        cd -
+
+    - name: "Push to itch.io (channel: macos)"
+      env:
+        BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
+      run: |
+        $HOME/.local/bin/butler push builds/dress-up_macos.zip \
+          "${ITCHIO_USERNAME}/${ITCHIO_GAME}:macos" \
+          --userversion "${{ steps.ver.outputs.v }}"
+
 
   # ───────────────── deploy job ─────────────────
   deploy:
