@@ -14,3 +14,9 @@ Juice!
 - Custom Cursor (Jadynn)
 - Particle System (Both of us!)
 - 'Done' Button with screenshot page (Sage - 2.5 hours)
+
+
+## Menu Development: Sage and Evie
+
+![screenshot of menu wireframe](assets/documentation/image.png)
+
