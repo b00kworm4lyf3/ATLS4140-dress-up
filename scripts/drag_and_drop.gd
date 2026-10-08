@@ -9,6 +9,10 @@ var off := Vector2.ZERO
 @export var perfect_pos := Vector2(-200, 24)
 @export var pos_forgive := Vector2(50, 50)
 
+func _ready() -> void:
+	Main.clothing_list.append(self)
+	tree_exiting.connect(func(): Main.clothing_list.erase(self))
+
 func _process(_delta: float) -> void:
 	if dragging:
 		position = get_global_mouse_position() - off
@@ -56,10 +60,3 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 			dragging = false
 			audio_player.pitch_scale = 0.6
 			audio_player.play()
-
-
-	
-
-
-func _on_button_pressed() -> void:
-	pass # Replace with function body.

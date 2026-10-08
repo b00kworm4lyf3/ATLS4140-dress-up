@@ -51,7 +51,6 @@
 [ext_resource type="Texture2D" uid="uid://k2m1q5a33xur" path="res://assets/accessories/glasses_shading.png" id="35_gngh3"]
 [ext_resource type="Texture2D" uid="uid://bf4k85kyasho" path="res://assets/accessories/anchor_necklace.png" id="40_wnkbs"]
 [ext_resource type="Script" uid="uid://cia2lyknekomi" path="res://scripts/custom_cursor.gd" id="49_0cbny"]
-[ext_resource type="AudioStream" uid="uid://by0mios0wqmew" path="res://assets/sound/Nicraftin_-_December_River.wav" id="50_hrvbo"]
 [ext_resource type="Texture2D" uid="uid://6r7bj54nm5np" path="res://assets/background/game_name.png" id="51_uypp3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6jrf"]
@@ -921,11 +920,6 @@ z_index = 200
 texture = ExtResource("33_4k2k6")
 offset = Vector2(5, 35)
 script = ExtResource("49_0cbny")
-
-[node name="BGMusic" type="AudioStreamPlayer2D" parent="." unique_id=927629946]
-stream = ExtResource("50_hrvbo")
-volume_db = -14.0
-autoplay = true
 
 [node name="GameText" type="Sprite2D" parent="." unique_id=1578270208]
 position = Vector2(0, -407)

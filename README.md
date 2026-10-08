@@ -13,11 +13,10 @@ Juice!
 - Custom Art (Jadynn - 5.5 hours)
 - Music (Jadynn - 20 mins)
 - Custom Cursor (Jadynn - 45 mins)
-- Particle System (Both of us!)
+- Particle System (Jadynn)
 - 'Done' Button with screenshot page (Sage - 2.5 hours)
 
 
 ## Menu Development: Sage and Evie
 
 ![screenshot of menu wireframe](assets/documentation/image.png)
-
