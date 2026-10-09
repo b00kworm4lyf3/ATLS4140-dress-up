@@ -23,3 +23,4 @@ Juice!
 
 - wireframe (Sage - 30 min)
 - main menu (Sage - play button took 3 hours (lots of bugs ><), tutorial overlay took 3 hours)
+- settings and back buttons (Evie - about 3 hours! pro-tip, don't work in decibels when it comes to audio accessibility settings, you might accidentally set the music to 100db)
