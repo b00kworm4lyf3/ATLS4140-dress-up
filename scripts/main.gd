@@ -4,6 +4,7 @@ var clothing_list := []
 var click := AudioStreamPlayer.new()
 var done_mode := false
 var music := AudioStreamPlayer.new()
+var tutorial_mode := false
 
 var previous_scene_path: String = ""
 
@@ -23,16 +24,13 @@ func _ready() -> void:
 	for button in get_tree().root.find_children("*", "Button", true, false):
 		_hook_button(button)
 
-
 func _on_node_added(node: Node) -> void:
 	if node is Button:
 		_hook_button(node)
 
-
 func _hook_button(button: Button) -> void:
 	if not button.pressed.is_connected(_play_click):
 		button.pressed.connect(_play_click)
-
 
 func _play_click() -> void:
 	click.pitch_scale = 1.4

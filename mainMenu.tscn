@@ -5,8 +5,24 @@
 [ext_resource type="Texture2D" uid="uid://b60mlidmt0siw" path="res://assets/background/box.png" id="2_83s16"]
 [ext_resource type="FontFile" uid="uid://bgkr5lmt5k2qo" path="res://assets/background/Cookiemonster-gv11.ttf" id="2_w7d22"]
 [ext_resource type="Texture2D" uid="uid://6r7bj54nm5np" path="res://assets/background/game_name.png" id="2_wc2lj"]
+[ext_resource type="Texture2D" uid="uid://byvumhbn3ldv8" path="res://assets/background/sparkles.png" id="4_0ei6b"]
 [ext_resource type="Texture2D" uid="uid://6xdrgfuqdvwl" path="res://assets/cursor/cursor256.png" id="6_hvu0j"]
 [ext_resource type="Script" uid="uid://cia2lyknekomi" path="res://scripts/custom_cursor.gd" id="7_0ei6b"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rdsan"]
+particles_animation = true
+particles_anim_h_frames = 8
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ei6b"]
+texture = ExtResource("2_83s16")
+region_rect = Rect2(608.1819, 208.07166, 301.8144, 468.9599)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rdsan"]
+texture = ExtResource("2_83s16")
+region_rect = Rect2(608.1819, 208.07166, 301.8144, 468.9599)
+modulate_color = Color(1, 0.57254905, 0.79607844, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ip1k6"]
 texture = ExtResource("2_83s16")
@@ -36,6 +52,20 @@ position = Vector2(590, 100)
 scale = Vector2(0.56, 0.56)
 texture = ExtResource("2_wc2lj")
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1924271878]
+material = SubResource("CanvasItemMaterial_rdsan")
+position = Vector2(614, 500)
+scale = Vector2(7.442, 4)
+amount = 16
+texture = ExtResource("4_0ei6b")
+emission_shape = 1
+emission_sphere_radius = 103.02
+spread = 120.75
+gravity = Vector2(0, 0)
+scale_amount_min = 1.5
+scale_amount_max = 2.0
+anim_speed_max = 0.3
+
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=111771446]
 layout_mode = 1
 anchors_preset = 15
@@ -55,16 +85,23 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.99215686, 0.5764706, 0.79607844, 1)
 theme_override_fonts/font = ExtResource("2_w7d22")
 theme_override_font_sizes/font_size = 88
-theme_override_styles/normal = SubResource("StyleBoxTexture_ip1k6")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0ei6b")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rdsan")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rdsan")
+theme_override_styles/focus = SubResource("StyleBoxTexture_rdsan")
 text = "Play"
 
 [node name="tutorial" type="Button" parent="CenterContainer/VBoxContainer" unique_id=423137995]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(500, 150)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.99215686, 0.5764706, 0.79607844, 1)
 theme_override_fonts/font = ExtResource("2_w7d22")
 theme_override_font_sizes/font_size = 88
 theme_override_styles/normal = SubResource("StyleBoxTexture_ip1k6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rdsan")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rdsan")
+theme_override_styles/focus = SubResource("StyleBoxTexture_rdsan")
 text = "Tutorial"
 
 [node name="CustomCursor" type="Sprite2D" parent="." unique_id=904088836]
