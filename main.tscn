@@ -52,6 +52,7 @@
 [ext_resource type="Texture2D" uid="uid://bf4k85kyasho" path="res://assets/accessories/anchor_necklace.png" id="40_wnkbs"]
 [ext_resource type="Script" uid="uid://cia2lyknekomi" path="res://scripts/custom_cursor.gd" id="49_0cbny"]
 [ext_resource type="Texture2D" uid="uid://6r7bj54nm5np" path="res://assets/background/game_name.png" id="51_uypp3"]
+[ext_resource type="PackedScene" uid="uid://bf3gl6kwukmd1" path="res://tutorial_popup.tscn" id="53_abqjc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6jrf"]
 bg_color = Color(0.85882354, 0.91764706, 0.9098039, 1)
@@ -925,6 +926,27 @@ script = ExtResource("49_0cbny")
 position = Vector2(0, -407)
 scale = Vector2(0.56000125, 0.56000125)
 texture = ExtResource("51_uypp3")
+
+[node name="tutorial_popup1" parent="." unique_id=389556928 instance=ExtResource("53_abqjc")]
+offset_left = 120.0
+offset_top = 3.0
+offset_right = 493.0
+offset_bottom = 159.0
+text = "click and drag clothing and hair to put them on the model!"
+
+[node name="tutorial_popup2" parent="." unique_id=899747377 instance=ExtResource("53_abqjc")]
+offset_left = -555.0
+offset_top = -127.0
+offset_right = -194.0
+offset_bottom = 23.0
+text = "click accessories to add or remove them and pick your makeup using the color palette!"
+
+[node name="tutorial_popup3" parent="." unique_id=1053181094 instance=ExtResource("53_abqjc")]
+offset_left = -297.0
+offset_top = 61.0
+offset_right = 44.0
+offset_bottom = 211.0
+text = "use the done! button to get a nice layout for a screenshot of your finished look!"
 
 [connection signal="pressed" from="ui/shadowParent/shadow1" to="ui/shadowParent/shadow1" method="_on_pressed"]
 [connection signal="pressed" from="ui/shadowParent/shadow2" to="ui/shadowParent/shadow2" method="_on_pressed"]

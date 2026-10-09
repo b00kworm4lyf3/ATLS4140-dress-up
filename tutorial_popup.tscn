@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://bf3gl6kwukmd1"]
+
+[ext_resource type="Texture2D" uid="uid://b60mlidmt0siw" path="res://assets/background/box.png" id="1_6aqww"]
+[ext_resource type="FontFile" uid="uid://bgkr5lmt5k2qo" path="res://assets/background/Cookiemonster-gv11.ttf" id="1_l5emp"]
+[ext_resource type="Script" uid="uid://d1jcquh2lnsjc" path="res://scripts/tutorial_popup.gd" id="2_l7lko"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_abqjc"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 5.0
+texture = ExtResource("1_6aqww")
+region_rect = Rect2(609.0002, 207.66255, 304.00012, 468.98712)
+modulate_color = Color(1, 0.5372549, 0.77254903, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6aqww"]
+bg_color = Color(0.9098039, 0.46666667, 0.68235296, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l7lko"]
+bg_color = Color(1, 0.69411767, 0.84705883, 1)
+
+[node name="PanelContainer" type="PanelContainer" unique_id=389556928 groups=["tutorial"]]
+custom_minimum_size = Vector2(100, 100)
+offset_right = 361.0
+offset_bottom = 100.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_abqjc")
+script = ExtResource("2_l7lko")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1358308648]
+layout_mode = 2
+
+[node name="closeButton" type="Button" parent="VBoxContainer" unique_id=460879391]
+custom_minimum_size = Vector2(25, 25)
+custom_maximum_size = Vector2(-1, 25)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_l5emp")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_6aqww")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_l7lko")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l7lko")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_6aqww")
+theme_override_styles/focus = SubResource("StyleBoxFlat_l7lko")
+
+[node name="Label" type="Label" parent="VBoxContainer/closeButton" unique_id=1691313251]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -28.0
+offset_right = 42.0
+offset_bottom = 26.0
+theme_override_fonts/font = ExtResource("1_l5emp")
+theme_override_font_sizes/font_size = 50
+text = "X"
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1537752824]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_l5emp")
+theme_override_font_sizes/font_size = 32
+text = "click and drag clothing and hair to put them on the model!"
+horizontal_alignment = 1
+autowrap_mode = 3

@@ -20,3 +20,6 @@ Juice!
 ## Menu Development: Sage and Evie
 
 ![screenshot of menu wireframe](assets/documentation/image.png)
+
+- wireframe (Sage - 30 min)
+- main menu (Sage - play button took 3 hours (lots of bugs ><), tutorial overlay took 3 hours)
