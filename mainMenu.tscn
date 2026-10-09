@@ -109,3 +109,21 @@ z_index = 200
 texture = ExtResource("6_hvu0j")
 offset = Vector2(5, 35)
 script = ExtResource("7_0ei6b")
+
+[node name="settings" type="Button" parent="." unique_id=1196831567]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -221.0
+offset_top = 16.0
+offset_right = -21.0
+offset_bottom = 116.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.99215686, 0.5764706, 0.79607844, 1)
+theme_override_fonts/font = ExtResource("2_w7d22")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_ip1k6")
+text = "Settings"

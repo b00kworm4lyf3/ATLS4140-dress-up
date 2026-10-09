@@ -1,0 +1,186 @@
+[gd_scene format=3 uid="uid://beo1ir7bnwbbd"]
+
+[ext_resource type="Script" uid="uid://dsxcrc4fdfntc" path="res://scripts/settings.gd" id="1_gc0em"]
+[ext_resource type="Texture2D" uid="uid://cvag3f2r6tick" path="res://assets/background/game_bg.jpg" id="1_x2hje"]
+[ext_resource type="FontFile" uid="uid://bgkr5lmt5k2qo" path="res://assets/background/Cookiemonster-gv11.ttf" id="2_3ykye"]
+[ext_resource type="Texture2D" uid="uid://b60mlidmt0siw" path="res://assets/background/box.png" id="3_gc0em"]
+[ext_resource type="Texture2D" uid="uid://6xdrgfuqdvwl" path="res://assets/cursor/cursor256.png" id="5_71mqq"]
+[ext_resource type="Script" uid="uid://cia2lyknekomi" path="res://scripts/custom_cursor.gd" id="6_3j6r5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cj1lu"]
+texture = ExtResource("3_gc0em")
+region_rect = Rect2(608.1819, 208.07166, 301.8144, 468.9599)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3lj6o"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.99607843, 0.50980395, 0.7529412, 0.68235296)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3j6r5"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.99215686, 0.38431373, 0.70980394, 0.8)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6mhpt"]
+bg_color = Color(0.99215686, 0.38431373, 0.70980394, 0.8)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ohexs"]
+bg_color = Color(0.99215686, 0.38431373, 0.70980394, 0.8)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c5gk5"]
+bg_color = Color(0.9775031, 0.31819522, 0.69537395, 0.56078434)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Control" type="Control" unique_id=1012505224]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gc0em")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=169702398]
+layout_mode = 0
+offset_left = 1199.0
+offset_top = 1199.0
+offset_right = 2398.0
+offset_bottom = 2398.0
+rotation = -3.1415927
+texture = ExtResource("1_x2hje")
+
+[node name="back" type="Button" parent="." unique_id=2037946941]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1160.0
+offset_top = 661.0
+offset_right = -960.0
+offset_bottom = 761.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.99215686, 0.5764706, 0.79607844, 1)
+theme_override_fonts/font = ExtResource("2_3ykye")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_cj1lu")
+text = "Back"
+
+[node name="CustomCursor" type="Sprite2D" parent="." unique_id=1022552612]
+z_index = 200
+texture = ExtResource("5_71mqq")
+offset = Vector2(5, 35)
+script = ExtResource("6_3j6r5")
+
+[node name="MusicSlider" type="HSlider" parent="." unique_id=1479529276]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -136.0
+offset_right = 440.0
+offset_bottom = -120.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_3lj6o")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_3j6r5")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_6mhpt")
+max_value = 1.0
+step = 0.1
+value = 0.5
+
+[node name="SFXSlider" type="HSlider" parent="." unique_id=1936187637]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -8.0
+offset_right = 440.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_3lj6o")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_3j6r5")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_ohexs")
+max_value = 1.0
+step = 0.1
+value = 0.5
+
+[node name="MusicLabel" type="Label" parent="." unique_id=1918645974]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -992.0
+offset_top = 226.0
+offset_right = -815.0
+offset_bottom = 320.0
+grow_horizontal = 0
+focus_mode = 2
+mouse_filter = 0
+theme_override_colors/font_color = Color(0.9964555, 0.8474209, 0.91789913, 1)
+theme_override_fonts/font = ExtResource("2_3ykye")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_c5gk5")
+text = "Music"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_trim_flags = 128
+
+[node name="SFXLabel" type="Label" parent="." unique_id=1165422085]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -991.0
+offset_top = 352.0
+offset_right = -814.0
+offset_bottom = 446.0
+grow_horizontal = 0
+focus_mode = 2
+mouse_filter = 0
+theme_override_colors/font_color = Color(0.9964555, 0.8474209, 0.91789913, 1)
+theme_override_fonts/font = ExtResource("2_3ykye")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_c5gk5")
+text = "SFX"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_trim_flags = 128
+
+[connection signal="drag_ended" from="MusicSlider" to="." method="_on_music_slider_drag_ended"]
+[connection signal="value_changed" from="MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="drag_ended" from="SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
+[connection signal="value_changed" from="SFXSlider" to="." method="_on_sfx_slider_value_changed"]

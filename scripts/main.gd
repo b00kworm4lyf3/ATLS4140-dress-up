@@ -6,9 +6,11 @@ var done_mode := false
 var music := AudioStreamPlayer.new()
 var tutorial_mode := false
 
-func _ready() -> void:
+var previous_scene_path: String = ""
+
+func _ready() -> void:	
 	music.stream = preload("res://assets/sound/Nicraftin_-_December_River.wav")
-	music.volume_db = -14.0
+	music.volume_linear = 0.5
 	music.bus = &"Music"
 	add_child(music)
 	music.play()
