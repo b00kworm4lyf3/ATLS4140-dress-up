@@ -12,6 +12,7 @@ var off := Vector2.ZERO
 func _ready() -> void:
 	Main.clothing_list.append(self)
 	tree_exiting.connect(func(): Main.clothing_list.erase(self))
+	audio_player = Main.click
 
 func _process(_delta: float) -> void:
 	if dragging:
