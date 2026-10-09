@@ -52,6 +52,8 @@
 [ext_resource type="Texture2D" uid="uid://bf4k85kyasho" path="res://assets/accessories/anchor_necklace.png" id="40_wnkbs"]
 [ext_resource type="Script" uid="uid://cia2lyknekomi" path="res://scripts/custom_cursor.gd" id="49_0cbny"]
 [ext_resource type="Texture2D" uid="uid://6r7bj54nm5np" path="res://assets/background/game_name.png" id="51_uypp3"]
+[ext_resource type="Script" uid="uid://cpoogthyx2xbc" path="res://scripts/settingsbutton.gd" id="53_abqjc"]
+[ext_resource type="Script" uid="uid://dcu5pqdw7vgy0" path="res://scripts/mainmenu_button.gd" id="54_6iyjs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6jrf"]
 bg_color = Color(0.85882354, 0.91764706, 0.9098039, 1)
@@ -415,6 +417,10 @@ animations = [{
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cs8lx"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_blkrb"]
+texture = ExtResource("2_jq2sk")
+region_rect = Rect2(608.1819, 208.07166, 301.8144, 468.9599)
 
 [node name="dressUpGame" type="Node2D" unique_id=1326834742]
 
@@ -926,6 +932,40 @@ position = Vector2(0, -407)
 scale = Vector2(0.56000125, 0.56000125)
 texture = ExtResource("51_uypp3")
 
+[node name="settings" type="Button" parent="." unique_id=869789517]
+custom_minimum_size = Vector2(200, 100)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 376.0
+offset_top = -452.0
+offset_right = 576.0
+offset_bottom = -352.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.99215686, 0.5764706, 0.79607844, 1)
+theme_override_fonts/font = ExtResource("19_abqjc")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_blkrb")
+text = "Settings"
+script = ExtResource("53_abqjc")
+
+[node name="mainmenu_button" type="Button" parent="." unique_id=1912881028]
+custom_minimum_size = Vector2(250, 100)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -576.0
+offset_top = -451.0
+offset_right = -326.0
+offset_bottom = -351.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.99215686, 0.5764706, 0.79607844, 1)
+theme_override_fonts/font = ExtResource("19_abqjc")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_blkrb")
+text = "main menu"
+script = ExtResource("54_6iyjs")
+
 [connection signal="pressed" from="ui/shadowParent/shadow1" to="ui/shadowParent/shadow1" method="_on_pressed"]
 [connection signal="pressed" from="ui/shadowParent/shadow2" to="ui/shadowParent/shadow2" method="_on_pressed"]
 [connection signal="pressed" from="ui/shadowParent/shadow3" to="ui/shadowParent/shadow3" method="_on_pressed"]
@@ -940,3 +980,5 @@ texture = ExtResource("51_uypp3")
 [connection signal="pressed" from="ui/skinParent/skin1" to="ui/skinParent/skin1" method="_on_pressed"]
 [connection signal="pressed" from="ui/skinParent/skin4" to="ui/skinParent/skin4" method="_on_pressed"]
 [connection signal="pressed" from="ui/done" to="ui/done" method="_on_pressed"]
+[connection signal="pressed" from="settings" to="settings" method="_on_pressed"]
+[connection signal="pressed" from="mainmenu_button" to="mainmenu_button" method="_on_pressed"]

@@ -5,7 +5,9 @@ var click := AudioStreamPlayer.new()
 var done_mode := false
 var music := AudioStreamPlayer.new()
 
-func _ready() -> void:
+var previous_scene_path: String = ""
+
+func _ready() -> void:	
 	music.stream = preload("res://assets/sound/Nicraftin_-_December_River.wav")
 	music.volume_db = -14.0
 	music.bus = &"Music"
