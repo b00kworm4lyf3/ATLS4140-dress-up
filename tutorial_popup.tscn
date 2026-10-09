@@ -30,6 +30,7 @@ script = ExtResource("2_l7lko")
 layout_mode = 2
 
 [node name="closeButton" type="Button" parent="VBoxContainer" unique_id=460879391]
+z_index = 100
 custom_minimum_size = Vector2(25, 25)
 custom_maximum_size = Vector2(-1, 25)
 layout_mode = 2

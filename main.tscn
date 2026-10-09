@@ -928,6 +928,7 @@ scale = Vector2(0.56000125, 0.56000125)
 texture = ExtResource("51_uypp3")
 
 [node name="tutorial_popup1" parent="." unique_id=389556928 instance=ExtResource("53_abqjc")]
+z_index = 20
 offset_left = 120.0
 offset_top = 3.0
 offset_right = 493.0
@@ -935,6 +936,7 @@ offset_bottom = 159.0
 text = "click and drag clothing and hair to put them on the model!"
 
 [node name="tutorial_popup2" parent="." unique_id=899747377 instance=ExtResource("53_abqjc")]
+z_index = 20
 offset_left = -555.0
 offset_top = -127.0
 offset_right = -194.0
@@ -942,6 +944,7 @@ offset_bottom = 23.0
 text = "click accessories to add or remove them and pick your makeup using the color palette!"
 
 [node name="tutorial_popup3" parent="." unique_id=1053181094 instance=ExtResource("53_abqjc")]
+z_index = 20
 offset_left = -297.0
 offset_top = 61.0
 offset_right = 44.0
