@@ -96,7 +96,8 @@ texture = ExtResource("5_71mqq")
 offset = Vector2(5, 35)
 script = ExtResource("6_3j6r5")
 
-[node name="MusciSlider" type="HSlider" parent="." unique_id=1479529276]
+[node name="MusicSlider" type="HSlider" parent="." unique_id=1479529276]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -112,10 +113,12 @@ grow_vertical = 2
 theme_override_styles/slider = SubResource("StyleBoxFlat_3lj6o")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_3j6r5")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_6mhpt")
-value = 100.0
-rounded = true
+max_value = 1.0
+step = 0.1
+value = 0.5
 
 [node name="SFXSlider" type="HSlider" parent="." unique_id=1936187637]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -131,8 +134,9 @@ grow_vertical = 2
 theme_override_styles/slider = SubResource("StyleBoxFlat_3lj6o")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_3j6r5")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_ohexs")
-value = 100.0
-rounded = true
+max_value = 1.0
+step = 0.1
+value = 0.5
 
 [node name="MusicLabel" type="Label" parent="." unique_id=1918645974]
 layout_mode = 1
@@ -175,3 +179,8 @@ text = "SFX"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_trim_flags = 128
+
+[connection signal="drag_ended" from="MusicSlider" to="." method="_on_music_slider_drag_ended"]
+[connection signal="value_changed" from="MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="drag_ended" from="SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
+[connection signal="value_changed" from="SFXSlider" to="." method="_on_sfx_slider_value_changed"]

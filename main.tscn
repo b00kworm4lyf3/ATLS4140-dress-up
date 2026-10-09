@@ -52,9 +52,9 @@
 [ext_resource type="Texture2D" uid="uid://bf4k85kyasho" path="res://assets/accessories/anchor_necklace.png" id="40_wnkbs"]
 [ext_resource type="Script" uid="uid://cia2lyknekomi" path="res://scripts/custom_cursor.gd" id="49_0cbny"]
 [ext_resource type="Texture2D" uid="uid://6r7bj54nm5np" path="res://assets/background/game_name.png" id="51_uypp3"]
-[ext_resource type="Script" uid="uid://cpoogthyx2xbc" path="res://scripts/settingsbutton.gd" id="53_abqjc"]
-[ext_resource type="Script" uid="uid://dcu5pqdw7vgy0" path="res://scripts/mainmenu_button.gd" id="54_6iyjs"]
+[ext_resource type="Script" uid="uid://cpoogthyx2xbc" path="res://scripts/settingsbutton.gd" id="53_4w656"]
 [ext_resource type="PackedScene" uid="uid://bf3gl6kwukmd1" path="res://tutorial_popup.tscn" id="53_abqjc"]
+[ext_resource type="Script" uid="uid://dcu5pqdw7vgy0" path="res://scripts/mainmenu_button.gd" id="54_6iyjs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6jrf"]
 bg_color = Color(0.85882354, 0.91764706, 0.9098039, 1)
@@ -948,7 +948,7 @@ theme_override_fonts/font = ExtResource("19_abqjc")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxTexture_blkrb")
 text = "Settings"
-script = ExtResource("53_abqjc")
+script = ExtResource("53_4w656")
 
 [node name="mainmenu_button" type="Button" parent="." unique_id=1912881028]
 custom_minimum_size = Vector2(250, 100)
@@ -966,6 +966,7 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxTexture_blkrb")
 text = "main menu"
 script = ExtResource("54_6iyjs")
+
 [node name="tutorial_popup1" parent="." unique_id=389556928 instance=ExtResource("53_abqjc")]
 z_index = 20
 offset_left = 120.0
